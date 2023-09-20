@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+/*@font-face {
+    font-family:'Montserrat';
+    src:url(../fonts/Montserrat-VariableFont_wght.ttf);
+}*/
+
+h1 {
+  /*  */
+  color: brown;
+  /* left, right, center, justify */
+  text-align: center;
+  /* (tdu/tdn) usually to remove inderligment of <a> */
+  text-decoration: underline;
+  text-decoration: none;
+  /* (ttu) uppercase text */
+  text-transform: uppercase;
+
+  /* font */
+  /* (fz) */
+  font-size: 50px;
+  /* (fw) for how thin/thick the font is */
+  font-weight: 300;
+  /* (ff) */
+  font-family: "Montserrat";
+  /* (fsi) */
+  font-style: italic;
+  /* funky stuff */
+  line-height: 300px;
+  letter-spacing: 50px;
+  /* text shadow: horizontal, vertical, blurryness, color  */
+  text-shadow: 15px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* text related properties inherits to child elements */
+section {
+  font-family: monospace;
+  font-size: 20px;
+}

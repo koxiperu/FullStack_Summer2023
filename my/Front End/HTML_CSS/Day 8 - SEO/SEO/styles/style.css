@@ -1,0 +1,63 @@
+body {
+  background-image: linear-gradient(90deg, rgb(28, 247, 8), rgb(247, 40, 4));
+  background-size: 200%;
+  text-align: center;
+  color: rgb(4, 88, 4);
+  -webkit-animation: round-it 5s 1s linear infinite alternate;
+          animation: round-it 5s 1s linear infinite alternate;
+}
+body img {
+  border-radius: 50px;
+  width: 300px;
+  box-shadow: 0 0 80px 20px rgb(180, 253, 180);
+}
+body section {
+  max-width: 700px;
+  margin: 2rem auto;
+}
+body section h1 {
+  margin: 5px;
+  font-size: 80px;
+  font-family: dancing script;
+  font-weight: 700;
+  text-shadow: 5px 5px 10px rgb(180, 253, 180);
+}
+body section h2 {
+  margin: 5px;
+  font-size: 50px;
+  font-family: dancing script;
+  font-weight: 700;
+}
+body section.lists {
+  background-color: rgb(238, 197, 122);
+  border: 1px solid rgb(180, 253, 180);
+  box-shadow: 0 0 80px 20px rgb(180, 253, 180);
+}
+body section.lists ul {
+  list-style: none;
+  text-align: left;
+}
+
+@-webkit-keyframes round-it {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes round-it {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}/*# sourceMappingURL=style.css.map */

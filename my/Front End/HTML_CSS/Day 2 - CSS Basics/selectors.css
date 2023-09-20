@@ -1,0 +1,75 @@
+h2 {
+    color:blue;
+}
+
+.tomato {
+    color:red;
+}
+
+.centered {
+    text-align:center;
+    text-transform: uppercase;
+}
+
+/*Addition important selectors
+no spaces: combines the selectors to gain more points*/
+h2.tomato.centered {
+    color:antiquewhite;
+}
+
+[type="email"] {
+    border:5px dashed peru;
+}
+
+[type="radio"] {
+    transform: scale(3);
+}
+
+#card-list {
+    background-color: lightgrey;
+}
+
+#gallery {
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+/*First priority - ID*/
+#the-victim {
+    color: blue;
+}
+/*Second priority - Class and Attribute at the same time*/
+.hello {
+    color: red;
+}
+
+[name="timmy"] {
+    color: orange;
+}
+/*Third priority - element*/
+h6 {
+    color: pink;
+}
+
+/*space to dig inside the elements*/
+#gallery img {
+    width: 200px;
+}
+
+p span {
+    color:rebeccapurple;
+}
+/* coma to select multiple elements*/
+h1, h2, article h3 {
+    font-family: monospace;
+}
+
+/*Bonus selectors
+direct child*/
+div>span {
+color: black;
+}
+/*right after*/
+article+span {
+    color:black
+}

@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Lato;
+  color: #444444;
+}
+
+body {
+  background: #F5F5F5;
+}
+
+body a {
+  text-decoration: none;
+}
+.button {
+  background-color: #329ef7;
+  color: white;
+  border-radius: 4px;
+  padding: 7.5px 28.2594px 8.5px 28.4594px;
+}
+a {
+  font-size: 16px;
+}
+h1 {
+  font-size: 44px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto 5%;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+/* header 
+making cssexy header */
+header,
+section,
+footer {
+  background-color: white;
+  padding: 5px 10%;
+  margin: 30px 10%;
+}
+#headernav,
+#main_nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+#headernav > img {
+  width: 102px;
+  height: 30px;
+}
+#headernav a {
+  margin: 0 5px;
+}
+#headernav a.inactive {
+  color: #777777;
+}
+#main_nav {
+  list-style: none;
+  display: flex;
+  margin: 5px auto;
+
+  gap: 2px;
+}
+
+/* content
+making cssexy content */
+#content p {
+  column-count: 2;
+  color: #8892a0;
+  font-size: 20px;
+}
+#content {
+  padding: 8% 10%;
+  text-align:inherit
+}
+
+/* contact
+making cssexy contact */
+#contact {
+  padding:8% 10%;
+  background-image: url(../exercise/imgs/shapes/9.svg);
+  background-size: 100% 100%;  
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+#contact > div {
+  background-color: white;
+  padding: 8% 5% 1%;
+  text-align: center;
+  border-top: 5px solid #329ef7;
+  box-shadow: 0px 5px 14px rgba(129, 129, 129, 0.2);
+  border-radius: 4px;
+ 
+}
+#contact p {
+  text-align: center;
+  color: #8892a0;
+  font-size: 20px;
+  margin: 10px 10%;
+}
+#name,
+#email,
+#subject, #textfield {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin: 10px auto;
+  padding:10px;
+  font-size: 16px;
+  font-family: Lato;
+  resize: vertical; 
+}
+
+form input::placeholder,
+#textfield::placeholder {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form > input {
+  display: flex;
+  flex-direction: row;
+}
+#subject,
+#textfield {
+  width: 100%;
+}
+form > div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+#name,
+#email {
+  width: 100%;
+}
+
+
+
+/* footer
+making cssexy footer */
+#flex-container {
+  display: flex;
+  flex-direction: row;
+  gap:3%;
+}
+
+#flex-container > *.groups {
+    width:40%;
+}
+#flex-container > *.follow {
+    width:15rem;
+}
+.flex-content > nav {
+  display: flex;
+  flex-direction: column;
+  }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+}
+footer > p {
+  margin: 20px auto 0;
+}
+footer a {
+    margin:10px 0;
+}
+.about p {
+    color: #8892a0;
+}
+.follow i {
+    margin: 10px;
+    font-size: 20px;
+}

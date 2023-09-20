@@ -1,0 +1,1 @@
+/* BitterBrainsBanner: The phase CERT_01 does not display banners */

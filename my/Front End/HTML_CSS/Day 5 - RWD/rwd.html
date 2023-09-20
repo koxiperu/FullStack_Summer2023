@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* mobile */
+      #content article {
+        background-color: yellow;
+        padding: 20px;
+        width: 80%;
+        margin: 20px auto;
+      }
+
+      /*breakpoint 800px  */
+      /* tablet */
+      @media screen and (min-width:600px) {
+        section {
+            display: flex;
+            width:600px;
+            margin:auto;
+            gap:5%;
+        }
+        body {
+            background-color: red;
+        }
+    }
+/* desctop */
+    @media screen and (min-width:900px) and (max-width:1400px){
+        section {
+            background-color: blue;
+        }
+    }
+      
+    </style>
+  </head>
+  <body>
+    <section id="content">
+      <article>We are the articles</article>
+      <article>And we come in peace</article>
+    </section>
+  </body>
+</html>

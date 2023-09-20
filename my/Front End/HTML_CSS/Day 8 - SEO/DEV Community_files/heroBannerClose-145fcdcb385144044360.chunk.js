@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[51],{703:function(e,n){var t,a;t=document.getElementById("hero-html-wrapper"),a=document.getElementById("js-hero-banner__x"),t&&a&&(a.setAttribute("aria-label","Close campaign banner"),a.addEventListener("click",(function(){localStorage.setItem("exited_hero",t.dataset.name),t.style.display="none"})))}},[[703,117]]]);
+//# sourceMappingURL=heroBannerClose-145fcdcb385144044360.chunk.js.map

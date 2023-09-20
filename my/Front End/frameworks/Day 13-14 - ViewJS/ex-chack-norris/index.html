@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck norris</title>
+    <link rel="stylesheet" href="styles/chuck.css">
+</head>
+<body>
+    <div id="app">
+        <section>
+            <ul id="listCat">
+                <li>
+                    <button v-on:click="getCategories()">get categories</button>
+                </li>
+                <li v-for="c in categories" v-on:click="getJoke(c)" :class="c">{{c}}</li>
+            </ul>            
+        </section>
+        
+        <section id="joke">
+            <article>
+                <h1>{{text}}</h1>
+            </article>
+        </section>
+        
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

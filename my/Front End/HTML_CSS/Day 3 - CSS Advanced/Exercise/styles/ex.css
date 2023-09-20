@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Spectral:wght@200&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #ccc;
+  font-family: "Spectial";
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+h1,
+h2 {
+  font-family: "Roboto";
+}
+
+main {
+  width: 600px;
+  margin: auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+article {
+  background-color: #fff;
+  padding: 15px;
+  margin: 5px 0px;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.flexy {
+  display: flex;
+  gap: 10px;
+}
+
+header {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px;
+  align-items: center;
+}
+
+#n h1,
+a[href="#n"] {
+  background-color: #2980b9;
+}
+
+#b h1,
+a[href="#b"] {
+  background-color: #c0392b;
+}
+
+#s h1,
+a[href="#s"] {
+  background-color: #27ae60;
+}
+
+#e h1,
+a[href="#e"] {
+  background-color: #16a085;
+}
+
+a[href="#n"]:hover {
+  color: #2980b9;
+  background-color: white;
+}
+
+a[href="#b"]:hover {
+  color: #c0392b;
+  background-color: white;
+}
+
+a[href="#s"]:hover {
+  color: #27ae60;
+  background-color: white;
+}
+
+a[href="#e"]:hover {
+  color: #16a085;
+  background-color: white;
+}

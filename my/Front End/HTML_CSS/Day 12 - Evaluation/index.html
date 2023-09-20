@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EvaluateIt</title>
+    <!-- stylesheet attached -->
+    <link rel="stylesheet" href="styles/index.css" />
+<!-- font awesome aatached -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <!-- body -->
+  <body>
+    <!-- header contains nav and menu-button-->
+    <header>
+      <img src="images/logo.png" alt="Logo of company" />
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">DISCOVERY</a></li>
+          <li><a href="#">PHOTOS</a></li>
+          <li><a href="#">CONTACTS</a></li>
+        </ul>
+        <button><img src="images/menu.png" alt="menu" /></button>
+      </nav>
+    </header>
+    <!-- main part contains section (with text and image) and submission form -->
+    <main>
+      <section>
+        <div class="text">
+          <h1>FORESTS ADVENTURES</h1>
+          <hr />
+          <h2>
+            Surprise your beloved by calling us, we'll offer free travel to
+            unforgettable places. Enter your victim's name Ned Flanders.
+          </h2>
+        </div>
+      </section>
+      <!-- submission form requires input -->
+      <form action="request.php">
+        <label for="name">Enter your participant's name</label>
+        <input required type="text" name="name" placeholder="John Doe" />
+        <label for="date">When do you want to start the adventure?</label>
+        <input required  type="text" name="date" placeholder="jj/mm/aaaa"/>
+        <button id="submit" type="submit" >BOOK</button>
+      </form>
+    </main>
+    <!-- footer with icons -->
+    <footer>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-earth"></i>
+    </footer>
+  </body>
+</html>

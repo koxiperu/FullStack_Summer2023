@@ -1,0 +1,187 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+/* common things for any screen*/
+
+body * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #202124;
+}
+body {
+  background-color: #f6f8f9;
+}
+body a {
+  text-decoration: none;
+}
+/* header common things */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+}
+header img {
+  width: 50px;
+  height: 50px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ul li > a {
+  padding: 10px;
+  color: #a6adb4;
+  letter-spacing: 0.8px;
+}
+header a:hover {
+  color: #202124;
+  text-decoration: underline;
+}
+/* main common things */
+h1,
+#submit {
+  font-family: "Limelight", cursive;
+}
+main {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+section {
+  background-image: url(../images/header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+hr {
+  width: 50px;
+  color: #fa6980;
+  margin: 20px auto;
+}
+#submit {
+  color: white;
+  font-size: 18px;
+  background-color: #fa6980;
+  padding: 15px;
+  border-radius: 10px;
+  width: 155px;
+  height: 50px;
+  border: 0;
+  
+}
+.text {
+  padding: 120px 20px 100px;
+}
+.text h1 {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+}
+.text h2 {
+  color: white;
+  font-size: 16px;
+  padding: 0 50px;
+}
+
+form {
+  margin: 10% auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+}
+form * {
+  margin: 10px;
+}
+form input {
+  height: 40px;
+  width: 100%;
+
+  border: 2px solid #a6adb4;
+  border-radius: 6px;
+  padding: 13px;
+}
+form input::placeholder {
+  color: #a6adb4;
+}
+form label {
+  font-size: 13px;
+  font-weight: 700;
+}
+/* footer common things */
+footer {
+    position: absolute;
+    bottom:0;
+    width:100%;
+  margin-top: 50px;
+  background-color: #a6adb4;
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+}
+i {
+    color:white;
+    font-size: 32px;
+    font-weight: bold;
+}
+/* for mobile */
+@media screen and (max-width: 700px) {
+  header > nav ul {
+    position: absolute;
+    transform: scale(0);
+  }
+
+}
+/* for tablet */
+@media screen and (min-width: 701px) and (max-width: 1080px) {
+  header > nav img {
+    position: absolute;
+    transform: scale(0);
+  }
+  #submit {
+    position: relative;
+    bottom: -85px;
+  }
+  form {
+    align-items: center;
+  }
+}
+/* for laptop */
+@media screen and (min-width: 1080px) {
+  header > nav img {
+    position: absolute;
+    transform: scale(0);
+  }
+  header {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    max-height: 500px;
+  }
+  main > section {
+    width: 50%;
+    padding:50px 30px;
+  }
+  #submit {
+    position: absolute;
+    top:570px;
+    right:calc(50% - 90px);
+  }
+
+}

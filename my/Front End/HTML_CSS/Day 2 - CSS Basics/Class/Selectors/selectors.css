@@ -1,0 +1,75 @@
+h2 {
+    color: blue;
+}
+
+.tomato {
+    color: red;
+}
+
+.centered {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+[type="email"] {
+    border: 5px dashed peru;
+}
+
+[type="radio"] {
+    transform: scale(3);
+}
+
+#card-list {
+    background-color: lightgray;
+}
+
+#gallery {
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+/* Selector priority : id > class/attribute > tag */
+#the-victim {
+    color: blue;
+}
+
+h6 {
+    color: pink;
+}
+
+[name="timmy"] {
+    color: orange;
+}
+
+.hello {
+    color: red;
+}
+
+/* Addition important selectors */
+/* no spaces : combines the selectors to gain more points */
+h2.tomato.centered {
+    color: aliceblue;
+}
+
+/* space to dig inside the elements */
+#gallery img {
+    width: 200px;
+}
+
+p span {
+    color: red;
+}
+
+/* , comma to select multiple elements */
+h1,
+h2,
+article h3 {
+    font-family: monospace;
+}
+
+/* Bonus selectors */
+/* direct child */
+div>span {}
+
+/* right after */
+article+span {}

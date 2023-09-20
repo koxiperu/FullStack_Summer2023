@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS Intro</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- this is my page where everything will be loaded from -->
+    <div id="app">
+        <img :class="gender" :src="picture" v-bind:alt="`${firstName} ${lastName}`">
+        <h1>{{firstName}} {{lastName}}</h1>        
+        <h3>Email: {{email}}</h3>
+        <button v-on:click="getUser()" :class="gender">Get Random user</button>
+        
+    </div>
+    <!--from CDN ---- https://vuejs.org/guide/quick-start.html -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- my script -->
+    <script src="scripts/app.js"></script>
+</body>
+</html>

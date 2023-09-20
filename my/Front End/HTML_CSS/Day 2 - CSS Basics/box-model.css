@@ -1,0 +1,24 @@
+div {
+    background-color: yellow;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+    box-sizing:border-box;
+    /*padding top 100px
+    padding:0px - all the sides
+    padding:0px 0px - top/buttom and left/right
+    padding:0px 0px 0px - top and left/right and bottom
+    padding:0px 0px 0px 0px - top and left and right and buttom*/
+    padding:50px 20px;
+    /*margin*/
+    margin-bottom:50px;
+    /*border*/
+    border: 5px solid darkblue;
+    border-radius: 20%;
+    /*https://bennettfeely.com/clippy/*/
+    /*clip-path: polygon(100% 100%, 100% 100%, 100% 100%);*/
+    /*center horisontally*/
+    width: 500px;
+    margin:20px auto;
+}
+

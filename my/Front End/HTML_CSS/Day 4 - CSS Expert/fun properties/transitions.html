@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: blue;
+        padding-left: 10px;
+        transition-duration: 1s;
+        transition-delay: 1s;
+        /* https://cubic-bezier.com/#1,-0.05, 0, 1.28 */
+        transition-timing-function: cubic-bezier(0.16, 1.05, 0.42, 0.99);
+      }
+      /* pseudo class 
+when mouse is over*/
+      h1:hover {
+        color: red;
+        padding-left: 100px;
+        padding-top: 100px;
+      }
+      /*ready to receive keyboard events  */
+      input:focus {
+        text-transform: uppercase;
+      }
+      button:focus {
+        text-transform: uppercase;
+      }
+
+      /* received an activation event */
+      button:active {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transitions</h1>
+    <input type="text" />
+    <button>Press</button>
+  </body>
+</html>

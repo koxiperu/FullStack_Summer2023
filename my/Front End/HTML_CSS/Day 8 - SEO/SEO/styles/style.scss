@@ -1,0 +1,65 @@
+$main_color1:rgb(28, 247, 8);
+$main_color2:rgb(247, 40, 4);
+$light_orange:rgb(238, 197, 122);
+$dark_orange:rgb(173, 81, 5);
+$dark_green:rgb(4, 88, 4);
+$light_green:rgb(180, 253, 180);
+
+
+body {
+    background-image: linear-gradient(90deg, $main_color1, $main_color2); 
+    background-size: 200%;
+    text-align: center;
+    color:$dark_green;
+    
+    img {
+        border-radius: 50px;
+        width:300px;
+        box-shadow: 0 0 80px 20px $light_green;
+    }  
+    section {
+        max-width:700px;
+        margin:2rem auto;
+        h1 {
+            margin: 5px;
+            font-size: 80px;
+            font-family: dancing script;
+            font-weight: 700;
+            text-shadow: 5px 5px 10px $light_green;
+            
+        }
+        h2 {
+            margin:5px;
+            font-size: 50px;
+            font-family: dancing script;
+            font-weight: 700;
+            }
+        &.lists {
+            background-color:$light_orange ;
+            border:1px solid $light_green;
+            box-shadow: 0 0 80px 20px $light_green;
+            ul {
+                list-style: none;
+                text-align: left;
+            }
+        }
+    } 
+    animation: round-it 5s 1s linear infinite alternate;
+}
+
+@keyframes round-it {
+    0% {
+        background-position:0 50%;
+    }
+    50% {
+        background-position:100% 50%;
+    }
+    100% {
+        background-position:0 50%;
+    }
+    
+}
+
+ 
+
+ 

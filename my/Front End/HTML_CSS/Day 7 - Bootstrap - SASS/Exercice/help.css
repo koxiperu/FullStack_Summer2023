@@ -1,0 +1,44 @@
+body nav {
+  background-color: white;
+}
+body nav div {
+  padding: 30px;
+}
+body nav div ul li a.active {
+  color: blue;
+}
+body section {
+  padding: 90px;
+  background-image: url(images/1-shape.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 5px 50px;
+}
+body section div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body section div article {
+  width: 60%;
+  padding: 20px;
+}
+body section div article h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+body section div article p {
+  font-size: 8;
+  margin: 10% 0;
+}
+body section div article button {
+  background-color: blue;
+  color: white;
+  font-size: 8px;
+  width: 45%;
+  height: 60px;
+}
+body section div article img {
+  width: 90%;
+}/*# sourceMappingURL=help.css.map */

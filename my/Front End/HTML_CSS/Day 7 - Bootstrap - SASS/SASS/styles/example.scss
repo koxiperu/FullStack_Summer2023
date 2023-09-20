@@ -1,0 +1,18 @@
+$main_color:pink;
+
+nav {
+    border:2px solid $main_color;
+    ul {
+        list-style: none;
+        li {            
+            a {
+                text-decoration: none;
+                // & means parent
+                &:hover {   
+                    text-decoration: underline;
+                    color: blueviolet;
+                }
+            }
+        }
+    }
+}

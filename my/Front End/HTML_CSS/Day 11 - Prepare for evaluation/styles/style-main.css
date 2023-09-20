@@ -1,0 +1,297 @@
+body * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family:"Lato";
+  }
+  /* header common */
+header {
+    background-image: url(../img/header.png);
+    background-size: cover;
+    background-position: center;
+    margin:-8px;
+    color: white;
+    text-align: center;
+}
+header a, section a, main>form>div>button {
+    text-decoration: none;
+    color:white;    
+}
+header h2 {
+    margin:20px auto;
+    text-align: center;
+    font-size: 30px;
+}
+header h3 {
+    margin:40px auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#login a {
+    padding:10px 15px;
+}
+#signup:hover, #logup:hover {
+    border:2px solid white;
+    padding:8px 15px;
+    border-radius: 23px;
+}
+header div>a, main>form>div>button {
+background-color: rgb(255, 100, 80);
+padding:10px;
+border-radius: 20px;
+}
+#header-text {
+padding:3% 5% 40%;
+}
+/* main common */
+main>h1, main>form>h1{
+    text-align: center;
+    padding:30px 0 10px;
+    margin: 40px auto 20px;
+}
+.s1 {
+    background-image: url(../img/step1desk.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.s2 {
+    background-image: url(../img/step2desk.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.s3 {
+    background-image: url(../img/step3desk.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.step>h1 {
+    margin:20px 0;
+    text-align: left;
+    font-size: 30px;
+}
+.step>p {
+    margin:10px 0;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 100;    
+}
+section a {
+    background-color: rgb(255, 100, 80);
+    border-radius: 20px;
+    padding:8px 20px;
+}
+/* form common */
+main>form  {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap:20px;
+border-bottom: 5px solid rgb(255, 100, 80);
+padding-bottom:40px;
+margin-left: -8px;
+margin-right: -8px;
+}
+label {
+    font-size: 20px;
+}
+/* footer common */
+footer h1 {
+    color: rgb(255, 100, 80);
+    font-size: 20px;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+footer a {
+    text-decoration: none;
+    color:rgb(73, 69, 69);
+}
+footer h2 {
+    font-size: 20px;
+    font-weight: 900;
+}
+/* Mobile */
+@media screen and (max-width:480px) {
+    /* mobile header */
+header h1 {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 30%;    
+    }
+#login {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap:10%;  
+    padding:20px;  
+}
+
+/* mobile main */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end; 
+    color:white;     
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin:10px;
+    padding:20px;   
+    height:380px;     
+}
+
+
+/* mobile form */
+main>form>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    width:100%;
+}
+main>form>div>a {
+    width:90%;
+    text-align: center;
+}
+input {
+    width:90%;
+    height: 50px;
+    border-radius: 10px;
+    padding:0 20px;
+    font-size: 20px;
+}
+
+/* mobile footer */
+footer {
+    text-align: center;
+    padding: 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10%;
+    list-style: none;
+    font-size: 22px;
+}
+
+footer div {
+    margin:10px;
+}
+
+}
+/* Tablet */
+@media screen and (min-width:481px){
+    /* tablet header */
+#header-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding:2% 3%;
+} 
+header h1 {
+    font-size: 20px;    
+    }   
+#login {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center; 
+    padding:10px;  
+}
+/* tablet main */
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    color:white; 
+    gap:2%;    
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding:20px; 
+    height:570px;
+    width:30vw;
+}
+/* tablet form */
+main>form>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    width:100%;
+}
+main>form>div>button {
+    width:150px;
+    text-align: center;
+}
+input {
+    width:250px;
+    height: 45px;
+    border-radius: 10px;
+    padding:0 20px;
+    font-size: 20px;
+}
+/* tablet footer */
+footer {
+    padding: 20px 10px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-between;
+   }
+   footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: center;
+    list-style: none;
+    font-size: 22px;
+}
+}
+/* laptop */
+@media screen and (min-width:1101px) {
+    section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; 
+        color:white; 
+        gap:2%;
+        padding:10px 10%;    
+    }  
+    footer {
+        padding: 20px 10% 30px;
+        display: flex;
+        flex-direction: row;
+        align-items:flex-start;
+        justify-content: space-between;
+       } 
+       #header-menu {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding:2% 15%;
+    }      
+}

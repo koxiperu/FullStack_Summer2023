@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Current </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="ic"> 
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+ 
+
+  <ion-item id="c">
+    <ion-label>
+      Today's weather in Luxembourg
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-img src="{{icon}}" alt=""> </ion-img>
+    <ion-label
+      >City {{name}}<ion-icon aria-hidden="true" name="heart"></ion-icon>
+      <ion-icon aria-hidden="true" name="heart"></ion-icon>
+      <ion-icon aria-hidden="true" name="heart"></ion-icon
+    ></ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Temperature: {{temp}} || Feels like: {{feeltemp}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Wind: {{windDir}} || {{windForce}} m/s</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Cloud coverage: {{cloudCov}}%</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Precipitation: {{pres}}mm/hr</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Humidity: {{hum}}%</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Visibility: {{vis}}km</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Atmospheric pressure: {{presu}}mb</ion-label>
+  </ion-item>
+  <ion-item id="ii"></ion-item>
+    
+  
+</ion-content>

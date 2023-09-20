@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Context</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="../index.html"><button>Home</button></a>
+
+        <!--<form> as the parent element action is
+            the target to send the form data-->
+        <form action="whatever.php">
+            
+        <!--All the allowed attributes are down here
+        there are more input types of you want to go fancy
+        <input> is also an autoclosing tag-->
+        <label for="firstname">First name</label>
+        <input type="text" name="firstname" value="Anna" required><br>
+
+        <label>E-mail</label>
+        <input type="email"><br>
+
+        <label>Pasword</label>
+        <input type="password" placeholder="Password"><br>
+
+        <input type="checkbox" name="yes" checked>
+        <!--<radio> radio buttons are linked together
+        by the name attribute-->
+        <input type="radio" name="thesamename" value="Male">
+        <input type="radio" name="thesamename" value="Female"><br>
+
+        <label>Profession</label>
+        <select name="Job">
+            <option value="">***</option>
+            <option value="developer">Devloper</option>
+            <option value="cook">Cook</option>
+            <option value="pilot">Pilot</option>
+        </select><br>
+
+        <input type="submit">
+       </form>
+       <!--this is the MVP (no, not that one
+        MVP is Minimum Viable Product
+        So the bare minimum for our form to perform at inteded)-->
+        <form action="just_put_it_here.php">
+            <input type="submit">
+        </form>
+    </body>
+</html>
