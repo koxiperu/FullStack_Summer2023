@@ -1,0 +1,135 @@
+/* styling of header */
+/* ---------------------------------------------- */
+body {
+    background-image:url(img/toyss.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(230, 230, 230);
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    border-radius:20px;
+    background-color:pink;
+    position: sticky;
+    
+}
+ul{
+    list-style:none;
+    display:flex;
+    flex-direction: row;
+    gap:50px; 
+    font-size: 25px;
+}
+.navbut {
+    text-decoration: none;
+    color:rgb(95, 25, 25);
+    font-size:60px;
+    background-color:rgb(241, 229, 231);
+    padding:5px;
+    margin:5px;
+    border-radius:10px;
+
+}
+ #nav{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    width:30%;
+}
+#nav img{
+    height:100px;
+    box-shadow:0 0 10px brown;
+    position: absolute;
+    right:100px;
+    
+}
+#nav h1 {
+    font-size:60px;
+    text-shadow:5px 5px 10px brown;
+    z-index: 10;
+}
+/* styling of the page "new toy" */
+/* ---------------------------------------------------- */
+.newToy{
+    margin:10px 40% 10px 20px;
+    padding:10px;
+    border-radius:20px; 
+    background-color:rgb(231, 225, 225);
+}
+.newToy>h1{
+    color:rgb(95, 25, 25);
+    text-align: center;
+}
+.toyForm{
+    background-color:white; 
+    margin:0 auto;
+    padding:20px;
+    width:70%;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.toyForm>p {
+     color:red;
+}
+.toyForm input{
+    border-radius: 10px;
+    min-height: 30px;
+    height:fit-content;
+    border:1px solid grey;
+    width:80%;
+}
+.toyForm textarea {
+    resize:none;
+    width:80%;
+    height:50px;
+}
+.row{
+    height:30px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#addnew {
+    background-color: pink;
+    border-radius: 10px;
+    border:1px solid grey;
+    padding:10px;
+    width:70px;
+    margin:10px auto;
+    color:brown;
+    
+}
+/* styling of page "all toys */
+/* ------------------------------------------------------- */
+.about_toy{
+    background-color: rgb(231, 225, 225);
+    border-radius: 15px;
+    border:1px solid pink;
+    margin:10px 40% 10px 20px;
+    padding:10px 30px;
+    display:flex; 
+    flex-direction:column;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.capital {
+    text-transform: uppercase;
+}
+.desc {
+    max-inline-size: 30c;
+}
+
+
+
+
+

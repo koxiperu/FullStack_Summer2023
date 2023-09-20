@@ -1,0 +1,33 @@
+version: "3.1"
+services:
+  laravel:
+    image: bitnami/laravel
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=dbl
+      - DB_PORT=3306
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+      - DB_DATABASE=cap4jobs
+    volumes:
+      - "./my-project:/app"
+
+  db:
+    container_name: dbl
+    image: mysql    
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+    ports:
+      - "3308:3306"
+  phpmyadmin:
+    image: arm64v8/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: dbl
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - "8080:80"

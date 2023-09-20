@@ -1,0 +1,91 @@
+https://fullstack-course.notion.site/Winted-Shop-Laravel-Project-c001dfac7d024bb9bc93747f54087c98 (tiny.cc/zvv9vz)
+
+# Before we start
+
+First of all, don’t forget that components and partials are your best friends to apply on of our key principles : never write it twice.
+
+Also, use naming conventions for your controller methods, this is a really good habit to have for the future !
+
+Of course, for your routes you will use a logical and standard pathing logic. Like don’t use “/shoes” route to access the “flowers.index” view…
+
+About views, sort all your views in folders like we did for Cap4Jobs and again use the right naming for the views (index, show, create, edit).
+
+Remember that your Laravel project comes with basic User features so no need to redo it from scratch, save some time on this :)
+
+You’re free to do your own styling for this project, either you do it yourself or pick an existing theme somewhere online.
+
+If you don’t feel like using all the super complicated features of Laravel (although they are super cool), just don’t. Stick to what you understand while trying your best to implement as much Laravel based code as possible. I prefer this then a dumb copy/paste without any understanding of what’s going on.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+# Let’s get into it
+
+1. Create a new Laravel project named “winted_shop”. For this project you will create the app for a fake online clothes shop. We will offer a few different categories of clothing items to our customers. The categories will be : Tops, Jeans, Shoes & Accessoires.
+2. In phpMyAdmin, add a new DB matching the name of our app (winted_shop). Then create a new Product model to work with the future products table of the DB.
+3. Next, add the migrations files for a “products” and a “categories”. For each item in these categories we’ll need their name, price, quantity and tags. Now work with the factory and database seeder to generate fake products and hard code the categories yourself in it’s own CategoryFactory.
+4. Change the homepage view to display the 4 latest items added in the table, with pagination to be able to browse through all of them. Also create a route/view to display all the items of a single category that will have a back button to make navigation easier. Then do the same for a single product. Hint : no need to create a route for each category, you can make this work with only ONE route and view ;)
+5. Add creation/edit forms and routes to work with the products. These forms must handle the different possible errors and display them when needed. Also, show a little popup message to give feedback to the user when one of the operation has been successful. To access these pages we will use a button in the navbar for the create form, and a button on the single product view for the edit form.
+6. Talking about navbar, it should include our shop logo, a button for each category and a login/register part on the right. If you feel fancy, turn the navbar into a side menu with a hide/show button !
+7. We’ll have a search bar partial that will be present on all product browsing views (so not the login/register part).
+8. Now start working on the user side of the website : create a new UserController, add the register and login forms, plus the POST routes to handle the form requests. For the users, we will want to get their first name, last name, email, postal address, zip code, city, birth date and phone number. Plus the classic password and password confirmation fields. They can also upload a profile picture.
+9. When a user is logged in, change the navbar to have “cart”, “my products” & “logout” buttons. Only allow the logged in users to add a new product and edit/delete them through the my products page that you will have to create. That also means using the middleware ;)
+10. In the footer, add a link for the user settings page that will be kind of a user edit form. They should be able to change their password (and confirm the change with another input) but also all their personal data. If they moved to another town this might come in handy !
+11. Remember, to allow users to use this “my products” page, you’ll need to define the relationship between the Product and the User model. Understand the kind of relationship that you’ll be using and make sure that you add the necessary columns in the DB tables.
+12. Now, the cart feature. I’ll want you to use the session() helper to handle the cart. It should store the items that have been added and be displayed as a list in the “cart” view, along with the individual price for each item and the total amount.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+You can run all of this in your C:/xampp/htdocs folder and all projects stored inside
+- create new Laravel project : composer create-project larave/laravel <project name>
+- run the server : php artisan serve
+- Controller : php artisan make:controller SongController
+Using resource flag : php artisan make:controller SongController --resource
+
+- Clear the cache :
+    - composer dump-autoload
+    - php artisan cache:clear
+
+- Migrations :
+    * Create migration : php artisan make:migration create_movies_table
+    * Run migration : php artisan migrate
+    * Refresh migration : php artisan migrate:refresh
+
+- Seeders :
+    * Create seeders : php artisan make:seeder MovieSeeder
+    * Run seeder : php artisan db:seed
+
+- Migrate + Seed : 
+    * php artisan migrate --seed
+    * php artisan migrate:refresh --seed
+
+- Create a custom request class :
+    * php artisan make:request StoreFlowerRequest 
+
+- Create a model :
+    * php artisan make:model Flower
+    * php artisan make:model CustomUser
+
+- Open from terminal :
+		* php artisan serve
+
+
+
+- Common Resources Routes
+    
+    index - Show all 
+    
+    show - show single
+    
+    create - show form to create new
+    
+    store - store new 
+    
+    edit - show form to edit 
+    
+    update - update it
+    
+    destroy - delete
