@@ -1,0 +1,71 @@
+Part 1:
+	- For each book, Retrieve its title and the name of the author
++---------------------+
+|SELECT title, name   |
+|FROM authors a       |
+|INNER JOIN books b   |
+|ON a.id=b.author_id  |
++---------------------+
+
+
+	- For each book, get all the information about it and the name of the author
++----------------------------+
+||SELECT b.id, title, price, |  b.*. a.name
+| name, publication_date     |
+|FROM  books b               |
+|INNER JOIN authors a        |
+|ON a.id=b.author_id         |
++----------------------------+
+
+
+	- Get the title of each book and the name of the author, sorted alphabetically on the title of the book.
++------------------------------+
+|SELECT title, name            |
+|FROM  books b                 |
+|INNER JOIN authors a          |
+|ON a.id=b.author_id           |
+|ORDER BY title                |
++------------------------------+
+
+
+
+	- Same but sorted on the authors name.
++---------------------------+
+|SELECT  title, name        |
+|FROM books b               |
+|INNER JOIN authors a       |
+|ON a.id=b.author_id        |
+|ORDER BY name              |
++---------------------------+
+
+Part 2:
+	- Collect the number of books by author (with the name of the author)
+	SELECT name, COUNT(*) as total
++------------------------+
+|SELECT  name, COUNT(*)  |
+|FROM books b            |
+|INNER JOIN authors a    |
+|ON a.id=b.author_id     |
+|GROUP BY author_id      |
++------------------------+
+
+
+Part 3:
+	- Get the sum of the price of all the books for one specific author (you choose which one)
++----------------------------------+
+|SELECT  name, ROUND(SUM(price),2) |
+|FROM books b                      |
+|INNER JOIN authors a              |
+|ON a.id=b.author_id               |
+|WHERE a.id=1                      |
++----------------------------------+
+
+
+	- Get the sum of price of all books by author
++----------------------------------+
+|SELECT  name, ROUND(SUM(price),2) |
+|FROM books b                      |
+|INNER JOIN authors a              |
+|ON a.id=b.author_id               |
+|GROUP BY author_id                |
++----------------------------------+

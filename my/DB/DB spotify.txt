@@ -1,0 +1,72 @@
+- The result is a table of playlists [user, playlist_name, song_name, artist]
++----------------------------------------------+
+|SELECT u.user_name, p.title, m.title, a.name  |
+|FROM playlist p                               |
+|INNER JOIN `grouping` g                       |
+|ON g.playlist_id=p.id                         |
+|INNER JOIN `user` u                           |
+|ON u.id=p.user_id                             |
+|INNER JOIN `music` m                          |
+|ON m.id=g.music_id                            |
+|INNER JOIN `artist` a                         |
+|ON a.id=m.artist_id                           |
++----------------------------------------------+
+Suppose, that:
+1. 1 user can have several playlists, but 1 playlist have only one user. If no, it should be another table for connecting users and playlists.
+2. 1 song have 1 cathegory. If no, it should be another table "categories".
+3. 1 song has 1 artist, but 1 artist has several songs. If no, it should be additional table "discography".
+
+
+- Display the name of the song within the most playlists.
++-----------------------------------------------+
+|SELECT m.title as song, COUNT(*) as popularity |
+|FROM playlist p                                |
+|INNER JOIN `grouping` g                        |
+|ON p.id=g.playlist_id                          |
+|INNER JOIN `music` m                           |
+|ON g.music_id=m.id                             |
+|GROUP BY m.title                               |
+|ORDER BY popularity DESC                       |
+|LIMIT 1                                        |
++-----------------------------------------------+
+
+- Display the name of the artist present in most playlists. Complex
++------------------------------------------------+
+|SELECT a.name as artist, COUNT(*) as popularity |
+|FROM playlist p                                 |
+|INNER JOIN `grouping` g                         |
+|ON p.id=g.playlist_id                           |
+|INNER JOIN `music` m                            |
+|ON g.music_id=m.id                              |
+|INNER JOIN `artist` a                           |
+|ON a.id=m.artist_id                             |
+|GROUP BY a.name                                 |
+|ORDER BY popularity DESC                        |
+|LIMIT 1                                         |
++------------------------------------------------+
+
+-List all playlists with the artiste at id 1 in your db.
++--------------------------+
+|SELECT DISTINCT p.title   |
+|FROM playlist p           |
+|INNER JOIN `grouping` g   |
+|ON p.id=g.playlist_id     |
+|INNER JOIN `music` m      |
+|ON g.music_id=m.id        |
+|WHERE m.artist_id=1       |
++--------------------------+
+
+- List artists in popularity (Popularity is defined by how often they appear in playlists).
+!!! popularity can be counted in "grouping", you don't have to jump to "playlists"
++------------------------------------------------+
+|SELECT a.name as artist, COUNT(*) as popularity | 
+|FROM playlist p                                 |
+|INNER JOIN `grouping` g                         |
+|ON p.id=g.playlist_id                           |
+|INNER JOIN `music` m                            |
+|ON g.music_id=m.id                              |
+|INNER JOIN `artist` a                           |
+|ON a.id=m.artist_id                             |
+|GROUP BY a.name                                 |
+|ORDER BY popularity DESC                        |
++------------------------------------------------+

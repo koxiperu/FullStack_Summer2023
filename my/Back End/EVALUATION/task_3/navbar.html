@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            padding:20px;
+            background-color: rgb(245, 224, 235);
+        }
+        nav {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border:2px solid rgb(243, 169, 169) ;
+            background-color: rgb(247, 197, 197);
+            padding:0 20px;
+        }
+        ul{
+            list-style:none;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:30px; 
+            font-size: 25px;
+        }
+        #bar {
+            background-color: black;
+            padding:5px;
+        }
+        #bar a{
+            color:white;
+        }
+        a {
+            text-decoration: none;
+        }
+        nav a {
+            color:black;
+        }
+        #registr li a{
+            background-color: lightgrey;
+            text-align: center;
+            justify-content: center;
+            border-radius: 10px;
+            padding:20px;
+            box-shadow: 0 0 10px grey;
+        }
+        img{
+            height:100px;
+            border-radius: 20px;
+        }
+        .section{
+            background-color:rgb(205, 175, 175);
+            border-radius: 20px;
+            width:50%;
+            height:auto;
+            padding:20px;
+            margin:20px auto;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+
+        }
+        form>div>*{
+            height:30px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        form>input {
+            border-radius: 10px;
+            padding:10px;
+            font-size: 20px;
+        }
+        .object {
+            background-color:rgb(205, 175, 175);
+            border-radius: 20px;
+            margin:20px auto;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .object>a{
+            background-color:lightgrey; 
+            margin:10px; 
+            border-radius: 10px;
+            padding:20px;
+            box-shadow: 0 0 10px grey;
+            color:black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img id='logo' src="images/candy.jpg" alt="picture"></li>
+            <li><h1>CandyShop</h1></li>
+        </ul>
+        <ul id="registr">
+            <li><a href="add-candy.php">add candy</a></li>
+        </ul>
+    </nav>
+    <ul id="bar">
+        <li><a href="home.php">show all candies</a></li>
+        <li><a href="add-candy.php">add candy</a></li>
+    </ul>
+</body>
+</html>
+

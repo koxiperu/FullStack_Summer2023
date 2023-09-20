@@ -1,0 +1,180 @@
+Part 1 :
+	- Retrieve books that are under 50 years old (released less than 50 years ago).
++------------------------------------+
+|SELECT  title, publication_date     |
+|FROM books                          |
+|WHERE publication_date>'1973-07-05' |  YEAR(NOW())-YEAR(publication_date) <50
++------------------------------------+
+	
+
+	- Retrieve all the authors that are Female (gender)
++-----------------------+
+|SELECT name            |
+|FROM `authors`         | 
+|WHERE gender='female'  |
++-----------------------+
+
+
+Part 2:
+	- Get all the books from the author "JK Rowling"
++--------------------------------------------+
+|SELECT b.id, title, name                    |
+|FROM books b                                | 
+|INNER JOIN authors a                        |
+|ON (a.id=b.author_id WHERE a.gender='female') | 
++--------------------------------------------+
+	
+
+	- Get all the authors books that are not "JK Rowling"
++------------------------------------------------+
+|SELECT b.id, title, name                        |
+|FROM books b                                    |
+|INNER JOIN authors a                            |
+|ON (a.id=b.author_id WHERE a.name!='J.K.Rowling') |
++------------------------------------------------+	
+
+	- Retrieve all books whose author has the letter 's' in his name.
++--------------------------------------------+
+|SELECT b.id, title, name                    |
+|FROM books b                                |
+|INNER JOIN authors a                        |
+|ON a.id=b.author_id WHERE (a.name LIKE '%A%') |
++--------------------------------------------+
+	
+
+
+
+Part 3:
+	- Retrieve the chepeast book with authors name
++--------------------------+
+|SELECT title, name, price |
+|FROM books b              |
+|INNER JOIN authors a      |
+|ON a.id=b.author_id       |
+|WHERE price=(             |
+|    SELECT MIN(price)     |
+|    FROM books            |
+|    )                     |
++--------------------------+
+
+
+
+- Retrieve the most expansive book with author's name
++--------------------------+
+|SELECT title, name, price |
+|FROM books b              |
+|INNER JOIN authors a      |
+|ON a.id=b.author_id       |
+|WHERE price=(             |
+|    SELECT MAX(price)     |
+|    FROM books            |
+|    )                     |
++--------------------------+
+
+	
+
+	- Retrieve the 3 most expansive books with author's name
++----------------------------+
+|SELECT title, price, name   |
+|FROM books b                |
+|INNER JOIN authors a        |
+|ON a.id=b.author_id         |
+|ORDER BY price DESC         |
+|LIMIT 3                     |
++----------------------------+
+
+
+Part 4:
+	- Get all the books from the youngest to the oldest author
++-------------------------------+
+|SELECT title, name, birth_year |
+|FROM books b                   |
+|INNER JOIN authors a           |
+|ON a.id=b.author_id            |
+|ORDER BY birth_year DESC       |
++-------------------------------+
+
+
+	- Retrieve the number of books by author (with the name of the author)
++------------------------------+
+|SELECT name, COUNT(*)         |
+|FROM books b                  |
+|INNER JOIN authors a          |
+|ON a.id=b.author_id           |
+|GROUP BY b.author_id          |
++------------------------------+
+
+
+Part 6:
+	- Get the sum of price for all the books from the author 'JK Rowling'
++------------------------------------------+
+|SELECT name, ROUND(SUM(price),2) AS cost  |
+|FROM books b                              |
+|INNER JOIN authors a                      |
+|ON a.id=b.author_id                       |
+|WHERE a.name="J.K.Rowling"                |
++------------------------------------------+
+
+
+	- Get the sum of price for all books by author
++------------------------------------------+
+|SELECT name, ROUND(SUM(price),2) AS cost  |
+|FROM books b                              |
+|INNER JOIN authors a                      |
+|ON a.id=b.author_id                       |
+|GROUP BY b.author_id                      |
++------------------------------------------+
+
+
+	- Get average price of all books by author
++---------------------------------------------+
+|SELECT name, ROUND(AVG(price),2) AS average  |
+|FROM books b                                 |
+|INNER JOIN authors a                         |
+|ON a.id=b.author_id                          |
+|GROUP BY author_id                           |
++---------------------------------------------+
+
+	- Get the sum of the price of all books by gender
++---------------------------------------------+
+|SELECT gender, ROUND(SUM(price),2) AS total  |
+|FROM books b                                 |
+|INNER JOIN authors a                         |
+|ON a.id=b.author_id                          |
+|GROUP BY gender                              |
++---------------------------------------------+
+
+Part 7:
+	- Get the author who has the most expensive collection of books.
++------------------------------------------+
+|SELECT name, ROUND(SUM(price),2) AS cost  |
+|FROM books b                              |
+|INNER JOIN authors a                      |
+|ON a.id=b.author_id                       |
+|GROUP BY b.author_id                      |
+|order by cost                             |
+|LIMIT 1                                   |
++------------------------------------------+
+
+	- Retrieve gender that has more than 3 books
++-------------------------------------+
+|SELECT gender, COUNT(*) as quantity  |
+|FROM books b                         |
+|INNER JOIN authors a                 |    
+|ON a.id=b.author_id                  |
+|GROUP BY gender                      |
+|HAVING quantity>3                    |
++-------------------------------------+
+
+
+Part 8:
+	- All JK Rowling's books have made 20 more price. Update these books.
++----------------------------------+
+|UPDATE books                      |
+|SET price=price+20                |  INNER JOIN authors a ON b.author_id=a.id
+|WHERE author_id=(                 |  SET price=price+20
+| SELECT id                        |  WHERE a.name LIKE "%Rowling"
+| FROM authors                     |
+| WHERE authors.name="J.K.Rowling")|
++----------------------------------+
+	

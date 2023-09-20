@@ -1,0 +1,18 @@
+SELECT  i.name as instruments_of_Met
+FROM instruments i                 
+INNER JOIN instruments_in_band ib  
+ON i.id=ib.instrument_id           
+INNER JOIN bands b                 
+ON b.id=ib.band_id                 
+WHERE b.name='Metallica'
+
+----------------------------------------------------
+
+SELECT b.name, count(*) as number_of_instruments 
+FROM instruments_in_band ib                      
+INNER JOIN bands b                               
+ON b.id=ib.band_id                               
+GROUP BY name 
+
+
+
