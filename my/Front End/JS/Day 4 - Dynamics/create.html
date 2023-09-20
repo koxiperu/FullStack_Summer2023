@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <style>
+        .important {
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create</h1>
+    <section></section>
+    <script>
+        //create element /3 steps process: Create, Append, Customize
+        
+        //1- create element
+        const myHeading=document.createElement("h2");
+
+        //2 - Append element in the page
+        document.querySelector("section").append(myHeading);
+        //.prepend() to add before existing content (inside <section>)
+        //.after() and .before() to add at the same level (inside <body>) than the element we select
+        //3 - Customize
+        myHeading.innerText="some content";
+        myHeading.classList.add("important");
+        myHeading.id="something";
+        myHeading.style.backgroundColor="blue";
+        myHeading.addEventListener("click", function(){
+            this.classList.toggle("important");
+        });
+    </script>
+</body>
+</html>

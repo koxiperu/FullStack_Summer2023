@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="#">
+        <label for="username">username</label>
+        <input type="text" name="" placeholder="" id="username" required>
+        <button type="submit">send</button>
+    </form>
+    <script>
+        const userInput=document.querySelector("#username");
+
+        //modify the behavior of the form when it is submitted
+        document.querySelector("form").addEventListener("submit", function(event){
+            //the default behavior for the event will not occur
+            //instead we will block it
+            //now the form can't process the inputs
+            //event.preventDefault();
+            
+
+            //inputs
+            const userValue=userInput.value;
+            const loweredValue=userValue.toLowerCase();
+            //logic filter for "crap"
+            const bad=loweredValue.includes(" crap ");
+            //feedback
+            if (bad) {
+                //prevent the submission of the form
+                event.preventDefault();
+                console.log("blocked");
+                userInput.style.borderColor="red";
+            } else {
+                this.innerText="Form submitted";
+            }
+        });
+    </script>
+</body>
+</html>

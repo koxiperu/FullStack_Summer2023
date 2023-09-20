@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fridge={
+            color:"red",
+            temperature:4,
+            beverages:["water","coke", "beers"],
+            owner: {
+                name:"Remi Humbert",
+                location:"none of your business"
+            }
+        };
+        console.log(fridge);
+        console.log(fridge.color); //object.property
+        console.log(fridge.owner.name); //object.subobject.property
+        console.log(fridge.beverages[1]); //object.array[index]
+
+        //objects inside arrays
+        const kitchen=["table","chairs",fridge];
+        console.log(kitchen[2].temperature);
+
+        fridge.color="blue"; //color will be blue
+        Object.freeze(fridge);
+        fridge.color="green"; //color will be still blue
+        console.log(fridge.color);
+
+        //In real life most of your interactions will be with objects
+        document.write("Hello");
+        Math.random();
+        [123, 34].legth;
+        //you will use JSON (Java Script Object Notation)
+        
+</script>
+</body>
+</html>

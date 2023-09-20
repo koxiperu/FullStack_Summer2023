@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercice</title>
+    <style>
+      #message {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      h2 {
+        color: rgb(110, 109, 2);
+        text-align: center;
+        width:200px;
+        position: fixed;
+        top:0;
+        right:0;
+        border: 2px solid yellowgreen;
+      }
+
+      .close {
+        color: red;
+      }
+
+      .open {
+        color: green;
+      }
+      .soonopen {
+        color: rgb(255, 153, 0);
+        text-align: center;
+      }
+      .soonclose {
+        color: rgb(80, 39, 1);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Exercice
+            FIRST the restaurant is open from 11h to 14h 
+            THEN - Open also from 19h to 23h
+            ---------------------------------------------
+            BONUS :
+            HURRY - Message telling the user that the restaurant 
+            close in {add time}... less then 30min
+            // above 13:30 / 22:30
+-->
+    <h1>Rest'o'Ranch</h1>
+    <p id="message">Open/Close</p>
+    <h3></h3>
+    <h2></h2>
+    <script>
+      const now = new Date(); // actuall current hour/date
+      let currentHour = now.getHours(); // 'get' from the new date
+      let currentMinutes = now.getMinutes();
+      document.querySelector("h2").innerHTML =
+        "By the way, current time is " + currentHour+":"+currentMinutes;
+      if ((currentHour >= 11 && currentHour <= 13) ||
+      (currentHour >= 19 && currentHour <= 22)) {
+        document.querySelector("p").innerHTML = "OPEN";
+        document.querySelector("p").className = "open";
+    } else {
+        document.querySelector("p").innerHTML ="CLOSE";
+        if (((currentHour == 10) && currentMinutes >= 30) ||
+        ((currentHour == 18) && currentMinutes >= 30)) {
+            const openSoon = 60 - currentMinutes;
+            document.querySelector("h3").innerHTML = "The restaurant will open in " + openSoon + " min";
+            document.querySelector("h3").className = "soonopen";
+        } else {
+            if (((currentHour == 13) && currentMinutes >= 30) ||
+            ((currentHour == 22) && currentMinutes >= 30)) {
+                const closeSoon = 60 - currentMinutes;
+                document.querySelector("h3").innerHTML ="The restaurant will close in " + closeSoon + " min";
+                document.querySelector("h3").className = "soonclose";
+            } else {
+                document.querySelector("h3").innerHTML = "";
+          }
+        }
+        document.querySelector("p").className = "close";
+      }
+      window.setTimeout(function(){location.reload()},60000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    array
+    <script>
+        //store multiple data
+        const fruits=["orange","banana",1,2, true,""];
+        //array index is 0 based
+        //console.log(fruits[0]);
+        console.log(fruits);
+        //console.table(fruits);
+
+        //length of array
+        console.log(fruits.length);
+        //retrieve the last item of the array
+        console.log(fruits[fruits.length-1]);
+        //add a value at the end of the array
+        fruits[fruits.length]="peach";
+        console.log(fruits[fruits.length-1]);
+        //write over another value
+        fruits[0]="apple";
+        console.table(fruits);
+
+        const drawers=[["phone charger", "headphones", "smartphone"],["controller","3ds"],["CVs",["Attendance sheet","evaluations"]],["USB", "keyboard"]];
+        console.table(drawers);
+        console.log(drawers[1]);
+        //choose 2nd element from the 2nd position
+        console.log(drawers[1][1]); //3ds
+        console.log(drawers[2][1][1]); //evaluations
+        
+        //makes 2 levels of depth into one: flat.
+        console.log(drawers.flat());
+
+    </script>
+</body>
+</html>

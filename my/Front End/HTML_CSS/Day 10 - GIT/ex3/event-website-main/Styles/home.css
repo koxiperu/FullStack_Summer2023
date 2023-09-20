@@ -1,0 +1,41 @@
+body {
+    background-image: url(../img/gpt.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+h1 {
+    color:rgb(20, 65, 0);
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 1px 1px red;
+}
+h2 {
+font-size: 30px;
+text-align: center;
+color:orange;
+
+}
+ol {
+    background-color: lightcoral;
+    width:50%;
+    margin:50px auto;
+}
+section>p {
+    color:rgb(20, 65, 0);
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 1px 1px red;
+
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    gap:20%;
+    align-content: center;
+    padding:20px 40%;
+font-size: 30px;
+text-align: center;
+color:orange;
+
+}

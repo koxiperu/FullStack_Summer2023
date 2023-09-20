@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      if (condition) {
+        //code when condition are met
+      } else {
+        //code when condition are NOT met
+      }
+
+      const drawingLevel = 100;
+      //I prefer doing my test BEFORE the if
+      //If the number is superior 50, drawingSkill will be true, otherwise false
+      const drawingSkill = drawingLevel > 50; //boolean (true in that case)
+      if (drawingSkill) {
+        //if react on true/false values
+        alert("WOW! Congrats!");
+      } else {
+        alert("Go buy new hands");
+      }
+      // false -> 0, false, NaN, undefined, null,""
+      //true -> everything else
+      //quizz what is the false?
+      //let somebodyInElevator; - undefined ->false
+      //somebodyInElevator=""; - empty ->false
+      //somebodyInElevator=" "; - space is a value ->true
+
+      //ONE "=" means ASSIGN
+      // TWO "==" means test EQUALITY
+      // THREE "===" means test EQUALITY and TYPE (STRICT EQUALITY)
+      const friend = "pikachu";
+      if (friend == "crabby") {
+        alert("I got em all");
+      } else {
+        alert("Gotta catch them all");
+      }
+      const num = 1;
+      if (num === true) {
+        console.log("you did it!");
+      } else {
+        console.log("Better luck next time");
+      }
+
+      //AND -> &&
+      const teacherIsHere = true;
+      const Co2Good = true;
+      if (teacherIsHere && Co2Good) {
+        alert("Course start");
+      } else {
+        alert("Have a nice holiday");
+      }
+      //OR -> ||
+      const igorHere = false;
+      if (teacherIsHere || igorHere) {
+        alert("Project starts");
+      } else {
+        alert("Go home");
+      }
+      //Else IF
+      if(age>=18) {
+        alert("You are an adult");
+      } else  if (age<18 && age>=0) { //better to check all conditions, even inside of upper condition
+        alert("You are a minor");
+      } else {
+        alert("You are not born yet");
+      }
+      
+    </script>
+  </body>
+</html>

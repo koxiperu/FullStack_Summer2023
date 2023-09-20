@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const fruits=["apple","banana","lemon","coconut"];
+    //most used => we don't care about index
+    //Loop throught the array once
+    for (const fruit of fruits) {           //let i=0;
+        console.log(fruit);                 //while (fruits.length>i-1) {
+    }                                       // console.log(fruits[i]);
+                                            //i++;
+                                            //}
+    //loop as long as the condition is true
+    //for (set index, condition, increase index)
+    for (let i=0; i<fruits.length; i++) {
+        const fruit=fruits[i];
+        console.log(i, fruit);
+    }
+    //real life example
+    const usersArray=[
+        {username:"Igor",password:"123"}, 
+        {username:"SpngeBob", password:"Patrick1"},
+        {username:"Morty", password:"Rick"},
+        {username:"mobyDick", password:"itsnovel"}    ]
+        //algorythm -> alert users whem their password is too short (length<4)
+        for (const user of usersArray) {
+            const weakPass=user.password.length<4;
+            if (weakPass) {
+                alert("Change your passsword: "+user.username);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+</head>
+<body>
+    <form action="#">
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+        <button type="submit" disabled>Send</button>
+
+        <script>
+            //event on keyboard
+            const usernameInput=document.querySelector("#username");
+            const formElement=document.querySelector("form");
+            const buttonElement=document.querySelector("button");
+
+            function checkUsername(event) {
+                const userValue=usernameInput.value;
+                console.log(userValue);
+                //check if username is at least 7 characters long
+                if (userValue.length>6) {
+                    buttonElement.disabled=false;
+                } else {
+                    buttonElement.disabled=true;
+                }
+            }
+
+            //on keyup it enables the button
+            usernameInput.addEventListener("keyup", checkUsername);
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div id="bodiv">
+    <h1>The best restaurant EVER: "{{first}}" </h1>
+    <h2>{{flikes}} likes</h2>
+    <h1>The second good restaurant: "{{second}}" </h1>
+    <h2>{{slikes}} likes</h2>
+    <h1>The third good restaurant: "{{third}}" </h1>
+    <h2>{{tlikes}} likes</h2>
+    <div>
+        <h3>Testimonials</h3>
+        <div *ngFor="let test of testList" id="review">
+            <h3>{{test.name}}</h3>
+            <p>{{test.testimonial}}</p>
+            <ul>
+                <li><fa-icon [icon]="faStar" style="color:yellow"></fa-icon></li>
+                <li>{{test.rating}}</li>
+            </ul>
+            
+        </div>
+    </div>
+</div>
+

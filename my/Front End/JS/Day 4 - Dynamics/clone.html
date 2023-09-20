@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone</title>
+</head>
+<body>
+    <h1>Dynamic clone</h1>
+    <section>
+        <article id="article-template">
+            <h2>example</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, sculpa amet.</p>
+        </article>
+    </section>
+    <script>
+        const articlesArray= [{
+            title:"I love HTML",
+            content:"HTML is a very nice programming language",
+            category:"fake"
+        }, {
+            title:"I love CSS",
+            content:"CSS is a very nice programming languages",
+            category:"fake"
+        },{
+            title:"I love JS",
+            content:"HTML and CSS are NOT real programming languages... OMG FAKE NEWS!",
+            category:"leaks"
+        }
+    ];
+    //Second: I'm lazy and I know it
+    //1 - I need a model/template/mock/placeholder
+    const articleFake=document.querySelector("#article-template");
+
+    //2 - duplicate/clone our model with attributes and classes.
+    for (const articleData of articlesArray){
+        //2.1 - clone elememnt (true => everything inside as well, false if cloning without children)
+        const articleHTMLClone=articleFake.cloneNode(true);
+        //2.2 - append
+        document.querySelector("section").append(articleHTMLClone);
+        //2.3 - customize/Pimp my clone
+        articleHTMLClone.id="";
+        articleHTMLClone.classList.add(articleData.category);
+        articleHTMLClone.querySelector("h2").innerText=articleData.title;
+        articleHTMLClone.querySelector("p").innerText=articleData.content;
+    }
+    //3 - kill the original
+    articleFake.remove();
+    </script>
+</body>
+</html>

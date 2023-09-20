@@ -1,0 +1,37 @@
+/* must have */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+article {
+    background-color: #fff;
+    /*bgc*/
+    width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+    border-bottom-right-radius: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    /*tac*/
+}
+
+h1 {
+    text-decoration: underline;
+    /*tdu*/
+    text-transform: uppercase;
+    /*tt*/
+}
+
+h2 {
+    /*ff*/
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 1px solid #000;
+    /*bb*/
+}

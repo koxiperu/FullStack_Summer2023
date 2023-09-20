@@ -1,0 +1,42 @@
+#bodiv {
+    background-color: rgb(189, 206, 200);
+    height:fit-content;
+    border-radius: 20px;
+    padding:10px;
+    align-items: center;
+    text-align: center;
+    color:rgb(14, 49, 38);
+    font-size: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    margin:20px auto;
+    gap:10px;
+}
+form>div {
+    display: flex;
+    flex-direction: row;
+    height:30px;
+}
+form>div>label{
+width:30%;
+}
+#restoName, #restoLikes{
+    width:70%;
+    border-radius: 5px;
+}
+#restoOpen {
+    width: 30px;
+    height: 30px;
+    text-align: left;
+}
+form button {
+    width:50%;
+    margin:10px auto;
+    border-radius: 10px;
+    padding:10px;
+    background-color: rgb(153, 196, 97);
+    font-size: 20px;
+}

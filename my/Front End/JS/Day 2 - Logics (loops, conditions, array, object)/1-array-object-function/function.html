@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //every function needs two parts
+        //1 - definition
+        function capital(nameParam) {
+            return nameParam.toUpperCase(); //we return a string
+        }
+        //2 - call
+        console.log(capital("reMi")); //we use the returned string
+
+        //using arguments (parameters)
+        //we need to give this function 2 arguments
+        function addNumber(num1, num2) {
+            let result=num1 + num2;
+            return result;
+        }
+        //this will not work since we're missing one argument
+        console.log(addNumber(3));
+
+        //Function can be declaired in 3 possible ways
+        function oracle1() {
+            return "maybe";
+        }
+
+        const oracle2 =function () {
+            return "maybe";
+        }
+        const oracle3=() => {
+            return "maybe";
+        }
+
+        console.log("==========ex=========");
+        function bestJB(nameJB) {
+            string="The best James Bond is "+nameJB;
+            return string;
+        }
+        console.log(bestJB("Daniel Craig"));
+        function agecalc(year) {
+            let old=2023-year;
+            return old;
+            //return an object:
+            // return {
+            //  human:age,
+            //  dog:age*7,
+            //  cat:age*10,
+            //};
+        }
+        let oldmessage="You are "+agecalc(2011)+" years old";
+        console.log(oldmessage);
+        console.log("============end===========");
+
+    </script>
+</body>
+</html>

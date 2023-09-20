@@ -1,0 +1,78 @@
+body {
+  padding-bottom: 1000px;
+}
+
+
+button {
+  width:100px;
+  margin:10px;
+  padding:5px;
+}
+nav,
+section#cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+ 
+}
+
+section#cards article {
+  width: 200px;
+  position: relative; 
+  margin:30px 10px;
+}
+
+section#cards article img {
+  width: 100%;
+}
+
+.seller {
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+}
+
+ul {
+  list-style: none;
+}
+li img {
+  float: left;
+  padding-right: 20px;
+}
+li p {
+  padding: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding:20px;
+}
+form textarea {
+  
+  width:100%;
+}
+form button {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+#sorting {
+  background-color: rgb(200, 200, 250);
+  border-radius: 5px;
+  padding:5px;
+  box-shadow: 2px 2px 2px violet;
+}
+.on{
+  background-color: aqua;
+  position:relative;
+  top:0;
+  right:0;
+  box-shadow: none;
+}

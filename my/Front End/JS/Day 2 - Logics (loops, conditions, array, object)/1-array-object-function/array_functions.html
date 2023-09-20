@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    funstions
+    <script>
+      //nust know functions/methods for aarays
+      const menu = ["salada", "antipasti", "piatti", "dessert"];
+      menu.indexOf("salada"); // -> 0 (return the index. If several the same items - returns first)
+      menu.indexOf("limoncello"); // -> -1, because not inside the array
+      menu.includes("salada"); //true if in the array, false - if not
+
+      //camelCase for the names of all variables
+      //we store the index (number) of the "piatti" string inside the menu-array
+      const piattiIndex = menu.indexOf("piatti"); // -2
+      // modify an array - splice
+      //splice (start, deleteCount, item1, item2, item N)
+      menu.splice(2, 1, "primi piatti", "secondi piatti");
+      //["salada", "antimasti", "primi piatti", "secondi piatti", "dessert"]
+      //if want just add without deleting, then deleteCound =0
+
+      //insert "limoncello" before dessert using a constant
+      const dessertIndex = menu.indexOf("dessert");
+      menu.splice(dessertIndex, 0, "limoncello"); //["salada",..., "limoncello", "dessert"]
+
+      console.log("==========ex==========");
+      console.log(menu);
+      menu.splice(0, 1);
+      console.log(menu);
+      menu.splice(0, 0, "soupa");
+      console.log(menu);
+      console.log("==========end==========");
+
+      //strings work kind of like arrays do
+      const name = "Remi";
+      console.log(name[0]); //R
+      console.log(name.length); //4
+      console.log(name.indexOf("em")); //--> returns the first index of beginnig in-string - 1
+
+      //other useful functions
+      //push() -> add at the end new element
+      // unshift() -> add at the start
+      //pop() -> remove (not-empty) last element
+      //shift() -> remove first (not-empty) element
+      //concat() ->merge two arrays
+      //flat() -> flatten 2-dimensional arrays
+      const ro = ["red", "orange"];
+      const yb = ["yellow", "blue"];
+      console.log(ro.concat(yb)); //["red, "orqnge", "yellow", "blue"]
+      //add an existing array inside the one you're creating - ""...array"
+      const rainbow = ["green", "purple", ...ro, ...yb];
+      console.log(rainbow);
+
+      //switch arry <-> string
+      //useful for replacing characters
+      //split()
+      const sentence = "I am Remi";
+      const sentArray = sentence.split(" "); // ["I", "am", "Remi"]
+      //join() adds spaces between elements (words)
+      const wothoutSpaces = sentArray.join(" "); // "I am Remi"
+      
+    </script>
+  </body>
+</html>

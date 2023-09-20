@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <style>
+        .cuby{
+            height: 80px;
+            width: 80px;
+            background-color: lightblue;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 2rem;
+            user-select: none;
+            /* Standard */
+            position: absolute;
+            top:50px;
+            left:50px;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- we create a div that will have to follow our mouse and change whem we click -->
+    <div class="cuby">o_o</div>
+    <script>
+        //we select the element and store it inside a constant
+        const cuby=document.querySelector(".cuby");
+
+        //
+        function kill(){
+            cuby.style.backgroundColor="red";
+            cuby.innerText="x_x";
+        };
+        //when we click
+        cuby.addEventListener("click",kill);
+
+        function fear() {
+            cuby.style.backgroundColor="orange";
+            cuby.innerText="0.0";
+        };
+        //when we move the mouse
+        cuby.addEventListener("mousemove", fear);
+
+        function relax() {
+            cuby.style.backgroundColor="lightblue";
+            cuby.innerText="o_o";
+        };
+        //when the mouse leaves the page
+        cuby.addEventListener("mouseleave",relax);
+
+        //make the cuby follow the mouse when on the page
+        document.addEventListener("mousemove", function(event){
+            cuby.style.top=event.clientY-50+"px";
+            cuby.style.left=event.clientX+50+"px";
+        });
+    </script>
+</body>
+</html>

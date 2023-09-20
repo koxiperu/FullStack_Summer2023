@@ -1,0 +1,19 @@
+<div id="bodiv">
+  <h2>Do you want to add a new restaurant to restaurant's page?
+  </h2>
+  <form (ngSubmit)="addNewRestaurant()">
+    <div>
+      <label for="restName">Restaurant's name</label>
+      <input type="text" id="restoName" name="rName" [(ngModel)]="restName"/>
+    </div>
+    <div>
+      <label for="restLikes">Likes</label>
+      <input type="number" step="1" id="restoLikes" name="rLike" [(ngModel)]="restLikes"/>
+    </div>
+    <div>
+        <label for="open">Open</label><br>
+        <input type="checkbox" id="restoOpen" name="rOpen" [(ngModel)]="restOpen"/>
+    </div>
+    <button type="submit">add  {{restName}}</button>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+@<div>
+    <h2>Restaurants List</h2>
+    <ul>
+        <li>
+            <p>status</p>
+            <p>Restaurant</p>
+            <p><i class="material-icons" style="font-size:30px;color:rgb(93, 29, 241)">favorite</i></p>
+            <p><i class="material-icons">thumb_up</i></p>
+            <p><i class="material-icons">thumb_down</i></p>
+        </li>
+        <!-- *ngFor ="condition" is the same as writing
+        for (condition){
+
+        }-->
+        <!-- but instead of selecting ->cloning->appending->customising we give the values dinamicaly using {{}} -->
+         <li *ngFor="let rest of restaurantsList" [class.popular]="rest==restToShow" [style.font-size.px]="20">
+             <!--[class.popular]="condition" is the same as if (condition){item.classList.add("popular")} -->
+             <p *ngIf="!rest.currentlyOpen"><i class="material-icons" style="font-size:30px;">lock</i></p>
+             <!--*ngIf="condition" is the same as if(condition){item.style.display=""} -->
+            <p *ngIf="rest.currentlyOpen"><i class="material-icons" style="font-size:30px;">lock_open</i></p>
+            <p>{{rest.name}}</p>
+            <button *ngIf="isEq(rest)" id="myLove" (click)="favorize(rest)">my love</button>
+            <button *ngIf="!(isEq(rest))" disabled id="myLove" >my love</button>
+            <p>{{rest.likes}}</p>             
+            <!-- insert font awesome star icon -->  
+            <button (click)="favorize(rest)">love</button>
+            <button (click)="unfavorize(rest)">hate</button>
+                        
+        </li>  
+    </ul>    
+     <fa-icon [icon]="faStar" style="color:yellow"></fa-icon>
+    <button (click)="showFav()">Show favorite</button>
+    <h1 *ngIf="restToShow">The best restaurant is {{restToShow.name}}</h1> 
+    
+</div>

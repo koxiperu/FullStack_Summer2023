@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background-color:#000122;
+    font-family: "roboto";
+}
+
+
+@media screen and (max-width:700px){
+    /* header */
+header img {
+    height:30px;
+}
+    header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    padding: 50px;
+}
+header a {
+    text-decoration: none;
+    font-size: 20px;
+    color:#A5B0DA;
+}
+
+/* main */
+main {
+    background-color: #F1F2FA;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding:50px;
+    width: 100%;
+    min-height: 400px;
+    height:max-content;
+    margin-bottom: 80px;
+}
+main >h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* sections */
+#messageBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: rgba(0,0,0, 0.3) solid 2px;
+    padding:20px 0;   
+}
+#messageBox >div {
+    width:80%;
+    font-size: 16px;
+    font-style: normal;
+}
+#messageBox img {
+    padding:10px;
+    width:20%;
+}
+#messageBox>div>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-style: bold;
+}
+#date {
+    color:rgba(0, 10, 10, 0.5);
+    font-weight: 100;
+    font-style: normal;
+}
+#unread {    
+    color: white;
+    text-align: center;
+    height:30px;
+    width: 30px;
+    border-radius: 15px;
+    padding:5px;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom:0;
+    background-color: white;
+    width: 100%;
+    height:80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:30px;
+}
+}

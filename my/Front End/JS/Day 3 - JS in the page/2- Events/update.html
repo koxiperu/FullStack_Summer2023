@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+</head>
+<body>
+    <h1>Update yay</h1>
+    <p>Hey</p>
+    <p>Hey</p>
+    <p>Hey</p>
+    <script>
+        //anonymous function
+        document.querySelector("h1").addEventListener("click", function(event) {
+            console.log(event);
+        });
+        // the same:
+        //document.querySelector("h1").addEventListener("click", (event) =>{console.log(event);})
+
+        //using a names function when an event is triggered
+        //definition of function
+        const myHeading=document.querySelector("h1");
+        function shoot(event) {
+            console.log(event);
+            alert("Bang!");
+        }
+        //using the function
+        myHeading.addEventListener("click", shoot);
+        //removing only works with only named functions
+        myHeading.removeEventListener("click", shoot);
+
+        //event with multiple elements
+        //targets
+        const allP=document.querySelectorAll("p"); //Array[]->for loop
+        //definition of the function
+        function hiphop(){
+            //"this" refers to the "target" that triggered the event
+            this.innerText+="-Ho";
+        }
+        //call the function
+        //I will attach the function to each <p>
+            for (const oneP of allP){
+                oneP.addEventListener("click",hiphop);
+            }
+    </script>
+</body>
+</html>

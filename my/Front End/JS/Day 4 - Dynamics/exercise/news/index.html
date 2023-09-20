@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <h1>Trending News</h1>
+  <form action="#">
+    <select name="category" id="category">
+      <option value="all" class="all">All</option>
+      <option value="science" class="science">Science</option>
+      <option value="politics" class="politics">Politics</option>
+    </select>
+    <input type="submit" value="Filter" />
+  </form>
+  <!-- BONUS -->
+    <ul>
+      <li>
+        <button type="button" name="all" class="selected" >All</button>
+      </li>
+      <li>
+        <button type="button" name="science"  >Science</button>
+      </li>
+      <li>
+        <button type="button" name="politics"  >Politics</button>
+      </li>
+    </ul>
+  
+
+  <section id="trending">
+    <article>
+      <h2>Titre</h2>
+      <p>content</p>
+      <a href="#">READ MORE</a>
+    </article>
+  </section>
+  <script src="scripts/0-data.js"></script>
+  <script src="scripts/1-clone.js"></script>
+  <script src="scripts/2-filtering.js"></script>
+  <script src="scripts/3-bonus.js"></script>
+  
+</body>
+
+</html>

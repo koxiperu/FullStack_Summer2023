@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Exercice</title>
+    </head>
+
+    <body>
+        <form id="form" action="">
+            <label>Name</label><br />
+            <input id="name" type="text" />
+            <br />
+            <label>Email</label><br />
+            <input id="email" type="email" />
+            <br />
+            <label>Phone Number</label><br />
+            <input id="number" type="tel" />
+            <br />
+            <button type="submit">Send</button>
+        </form>
+        <script>
+        //document.querySelector("#form").addEventListener("submit", function(event){
+            document.querySelector("form").addEventListener("keyup",function(){
+            event.preventDefault();
+            const usernameInput=document.querySelector("#name");
+            const userphoneInput=document.querySelector("#number");
+            const useremailInput=document.querySelector("#email");
+            const userName=usernameInput.value;
+            const phoneNumber=userphoneInput.value;   
+            const userEmail=useremailInput.value;         
+            if (userName.length>4) {     
+                //OR 
+                //ternany operator=(condition)?valueTrue:valueFalse;
+                //usernameInput.style.borderColor=(userName.length>4)?"green":"red";           
+                usernameInput.style.borderColor="green";
+                console.log(userName);
+            } else {
+                usernameInput.style.borderColor="red";
+            }
+            if (phoneNumber.length==9) {
+                if (Number(phoneNumber)) { //Number.isNaN(phoneNumber) - not a number
+                    userphoneInput.style.borderColor="green";
+                } else {
+                    userphoneInput.style.borderColor="red";
+                }
+                
+            }else{
+                userphoneInput.style.borderColor="red";
+            }
+            if ((userEmail.includes("."))&&(userEmail.includes("@"))) {
+                if (userEmail.indexOf(".")>userEmail.indexOf("@")) {
+                    useremailInput.style.borderColor="green";
+                } else {
+                    useremailInput.style.borderColor="red";
+                }                                
+            }else{
+                useremailInput.style.borderColor="red";
+            }
+        });
+        /*
+    When the form is submitted
+      - GATHER :
+          get the #name input,
+          input value
+          and length of this input value
+     - LOGIC : check if the name length is above 4
+     - DISPLAY :
+                  put a green border if valid
+                  put a red border if wrong
+    */
+            /*
+               MEDIUM : check for the phone tel to 
+               have exactly than 9 characters
+             */
+
+            /*
+            ADVANCED : The email should contain a "@" AND a dot "."
+            HINT : use .indexOf('.') > -1 // includes('.')
+            */
+
+            /*
+                BONUS : Verify this "on the fly" using the input "keyup" event
+            */
+        </script>
+    </body>
+
+</html>

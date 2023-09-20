@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(100, 100, 150, 0.5);
+}
+
+section {
+    background-color: rgba(100, 100, 150, 0.2);
+    text-align: center;
+    color: rgb(255, 214, 110);
+    /*box model*/
+    width: 500px;
+    /*no height but padding*/
+    padding: 20px;
+    border-bottom: 5px solid rgb(255, 214, 110);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 200px auto;
+}
+
+h1 {
+    border-bottom: 1px solid rgb(255, 214, 110);
+    padding-bottom: 10px;
+}
+
+img {
+    border: 7px solid rgb(255, 214, 110);
+    border-radius: 50%;
+    margin: 10px;
+}
