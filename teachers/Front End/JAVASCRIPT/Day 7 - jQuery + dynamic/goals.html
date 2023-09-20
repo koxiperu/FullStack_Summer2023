@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google font on TOP of my Style -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <!-- My style -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <header>
+        <h1>
+            <img src="images/icons/logo.png" alt="E-banco">
+        </h1>
+        <a href="messages.html">
+            <img src="images/icons/message.png" alt="My Messages">
+            <span id="notifications">2</span>
+        </a>
+    </header>
+    <!-- GOALS CONTENT-->
+    <main>
+        <h2>Goals & Wishes</h2>
+        <ul>
+            <li><button class="selected" id="all">All <span>5</span></button></li>
+            <li><button id="new">New <span>3</span></button></li>
+            <li><button id="reached">Reached <span>2</span></button></li>
+        </ul>
+        <section id="goalsSection">
+            <article>
+                <h3>Example</h3>
+                <h4>
+                    <span class="current">$10.000</span>
+                    <span class="goal">$60.000</span>
+                </h4>
+                <progress max="60000" value="10000"></progress>
+            </article>
+
+        </section>
+    </main>
+    <!-- BOTTOM BAR -->
+    <footer>
+        <ul>
+            <li><a href="#"><img src="images/icons/menu-home-active.png" alt=""></a></li>
+            <li><a href="#"><img src="images/icons/menu-transaction.png" alt=""></a></li>
+            <li><a href="#"><img src="images/icons/menu-card.png" alt=""></a></li>
+            <li><a href="#"><img src="images/icons/menu-other.png" alt=""></a></li>
+        </ul>
+    </footer>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- My scripts -->
+    <script src="scripts/data.js"></script>
+    <script src="scripts/jquery-script.js"></script>
+</body>
+
+</html>

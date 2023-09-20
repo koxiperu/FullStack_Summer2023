@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // Every function needs two parts
+            // 1 - Definition
+            function capital(nameParam) {
+                return nameParam.toUpperCase(); // we return a string
+            }
+            // 2 - Call
+            console.log(capital("remi")); // we use the returned string
+
+            // Using arguments (parameters)
+            // We need to give this function 2 arguments
+            function addNumber(num1, num2) {
+                let result = num1 + num2;
+                return result;
+            }
+            // This will not work since we're missing one argument
+            console.log(addNumber(3));
+
+            // Functions can be declared in 3 possible ways
+            function oracle1() {
+                return "maybe";
+            }
+
+            const oracle2 = function () {
+                return "maybe";
+            }
+
+            const oracle3 = () => {
+                // WARNING, do not use >= (it means bigger or equal)
+                return "maybe";
+            }
+
+            // Exercices
+            // 1) A function "bestJB" that returns a string with the best James Bond in your opinion.
+            // (if you did not see them shame on you...)
+            function bestJB() {
+                return "me";
+            }
+            console.log(bestJB());
+
+            // 2) Age calculator with an argument for the year of birth
+            // how old are you ?
+            function ageCalculator(yob) {
+                const age = 2023 - yob;
+                return age;
+                // return an object
+                // return {
+                //   human: age,
+                //   dog: age * 7,
+                //   cat: age * 10,
+                // };
+            }
+            console.log(ageCalculator(1983));
+
+        </script>
+    </body>
+
+</html>

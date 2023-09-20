@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            p {
+                border: 1px solid black;
+            }
+
+            /* fixed on the browser window/viewport */
+            #fixed {
+                position: fixed;
+                top: 0;
+                right: 0;
+                margin: 0;
+            }
+
+            /* Absolute move the element... but just inside the parent (has to not be static) */
+            #absolute {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 0;
+            }
+
+            #reference {
+                position: relative;
+                height: 200px;
+                width: 200px;
+                background-color: chartreuse;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+        <div id="reference">
+            <p id="absolute">absolute</p>
+        </div>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+        <p id="fixed">fixed</p>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+    </body>
+
+</html>

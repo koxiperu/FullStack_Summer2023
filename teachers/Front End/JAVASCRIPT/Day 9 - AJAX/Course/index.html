@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+    <style>
+      ul {
+        column-count: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- we will use : Chuck Norris (api) website
+         https://api.chucknorris.io/ -->
+
+    <h1>Chuck Jokris</h1>
+    <ul id="categories">
+      <li></li>
+    </ul>
+
+    <h2>Vanilla JS</h2>
+    <p id="jokeJS"></p>
+
+    <h2>jQuery</h2>
+    <p id="jokeJQ"></p>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="categories.js"></script>
+    <script src="random.js"></script>
+  </body>
+</html>

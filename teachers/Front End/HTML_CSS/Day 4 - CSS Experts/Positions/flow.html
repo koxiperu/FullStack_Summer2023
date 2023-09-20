@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            p {
+                border: 1px solid black;
+            }
+
+            /* static is the default position, you can't move it */
+            #static {
+                position: static;
+            }
+
+            /* relative : move an element with top/right/bottom/left */
+            /* still inside the flow like static */
+            /* the "flow" is how the elements inside the document interact together. 
+             when elements are inside the flow, the browser saves some space for them to be displayed */
+            #relative {
+                position: relative;
+                top: 20px;
+                left: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+        <p id="static">static</p>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+        <p id="relative">relative</p>
+        <p>I'm a paragraph</p>
+        <p>I'm a paragraph</p>
+    </body>
+
+</html>

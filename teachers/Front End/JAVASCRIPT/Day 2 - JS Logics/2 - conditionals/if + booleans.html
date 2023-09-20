@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            if (condition) {
+                // code when conditions are met
+            } else {
+                // code when conditions are NOT met
+            }
+
+            const drawingLevel = 100;
+            // I prefer doing my test BEFORE the if
+            // If the number is superior to 50, drawingSkill will be true, otherwise drawingSkill will be false
+            const drawingSkill = drawingLevel > 50;
+            // if reacts on true/false values
+            if (drawingSkill) {
+                alert("WOW! Congrats!");
+            } else {
+                alert("Go buy new hands");
+            }
+            // false -> 0, false, NaN, undefined, null, ''
+            // true -> everything else
+
+            //quizz what is true or false ?
+            let somebodyInElevator; // undefined -> false
+            somebodyInElevator = ""; // empty -> false
+            somebodyInElevator = " "; // space is a value -> true
+
+            // ONE '=' means ASSIGN
+            // TWO '==' means test equality (value)
+            // THREE '===' means test STRICT equality (value AND type)
+            const friend = "pikachu";
+            if (friend == "crabby") {
+                alert("I got em all");
+            } else {
+                alert("Gotta catch them all");
+            }
+
+            const num = 1;
+            if (num === true) {
+                console.log("you did it!");
+            } else {
+                console.log("Better luck next time");
+            }
+
+            // Large equality - Quizz
+            let age = 18;
+            age < 18; // F
+            age > 18; // F
+            age == 18; // T
+            age >= 18; // T
+            age <= 18; // T
+            (age) => 18; // gotcha, it's a function
+            age == "18"; // T
+            age != 28; // T : ! means NOT
+
+            //Strict equality
+            age === 18; // T
+            age === "18"; // F
+            age !== "18"; // T
+            age !== 18; // F
+
+            // ! NOT
+            const thisVariable = "something";
+            thisVariable; // T
+            !thisVariable; // F
+            !!thisVariable; // T
+
+            // AND -> &&
+            const teacherHere = true;
+            const CO2Good = true;
+            if (teacherHere && CO2Good) {
+                alert("Course starts");
+            } else {
+                alert("Have a nice holiday !");
+            }
+
+            // OR -> ||
+            const igorHere = false;
+            if (teacherHere || igorHere) {
+                alert("Project starts");
+            } else {
+                alert("Go Home");
+            }
+
+            // Else If
+            if (age >= 18) {
+                alert("You're an adult");
+            } else if (age < 18 && age >= 0) {
+                alert("You're a minor");
+            } else {
+                alert("You're not born yet...");
+            }
+        </script>
+    </body>
+
+</html>

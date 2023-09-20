@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Dynamic</h1>
+        <section></section>
+
+        <script>
+            const articlesArray = [
+                {
+                    title: "I love HTML",
+                    content: "HTML is a very nice programming language...",
+                    category: "fake"
+                },
+                {
+                    title: "I love CSS",
+                    content: "CSS is a very nice programming language...",
+                    category: "fake"
+                },
+                {
+                    title: "I love JS",
+                    content: "HTML and CSS are NOT real programming languages... OMG FAKE NEWS!",
+                    category: "leaks"
+                }
+            ];
+            // I want to dynamically add this content to my <section>
+            // Two solutions for that
+            // First : I code everything because why not
+            for (const articleData of articlesArray) {
+                // [ARTICLES]
+                // 1 - Create
+                const articleHTML = document.createElement("article");
+                // 2 - Append
+                document.querySelector("section").append(articleHTML);
+                // 3 - Customize
+                articleHTML.classList.add(articleData.category);
+
+                // [H2]
+                const headingHTML = document.createElement("h2");
+                articleHTML.append(headingHTML);
+                headingHTML.innerText = articleData.title;
+
+                // [p]
+                const paragraphHTML = document.createElement("p");
+                articleHTML.append(paragraphHTML);
+                paragraphHTML.innerText = articleData.content;
+            }
+        </script>
+    </body>
+
+</html>

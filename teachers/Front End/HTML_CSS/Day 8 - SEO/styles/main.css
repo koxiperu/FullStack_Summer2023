@@ -1,0 +1,49 @@
+body {
+  background-image: linear-gradient(30deg, #bc7e7e, #5184d1);
+  background-size: 400%;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section {
+  border: 1px solid white;
+  max-width: 500px;
+  padding: 1rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+h1, h2, strong {
+  font-family: "Cherry Bomb One", cursive;
+  letter-spacing: 0.2rem;
+}
+
+p, li {
+  font-family: "Lora", serif;
+}
+
+li {
+  text-align: left;
+}
+
+/* Animations */
+@keyframes movingBG {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+body {
+  animation: movingBG 10s linear infinite;
+}/*# sourceMappingURL=main.css.map */

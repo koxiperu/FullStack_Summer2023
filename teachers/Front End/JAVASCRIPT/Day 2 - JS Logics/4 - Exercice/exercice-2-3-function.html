@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 2-3-function</title>
+  </head>
+
+  <body>
+    <script>
+      const secret = 5;
+      let lives = 5;
+      // defintion
+      function play() {
+        const guess = prompt(lives + " lives - Guess my number");
+        if (guess == secret) {
+          alert("Success");
+        } else {
+          alert("Ya looser");
+          lives--;
+          if (lives > 0) {
+            play(); // recursivity - a function that call itself
+          } else {
+            alert("Game Over");
+          }
+        }
+      }
+      // call / use
+      play();
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div {
+                height: 100px;
+                width: 100px;
+                background-color: lightskyblue;
+                border-radius: 10px;
+                /* animation: "keyframe" / duration / delay / easing-function / iteration-count / direction */
+                animation: shake-it .5s 1s linear infinite alternate;
+            }
+
+            @keyframes shake-it {
+                from {
+                    transform: skew(-10deg, -5deg);
+                }
+
+                50% {
+                    transform: skew(0deg, 0deg) rotate(60deg);
+                }
+
+                to {
+                    transform: skew(10deg, 10deg);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>DOM</h1>
+        <p>paragraph</p>
+        <p>paragraph</p>
+        <p>paragraph</p>
+
+        <input type="email" id="usermail" value="igor.marty@live.fr" />
+        <input type="checkbox" name="ack" id="acknowledgement" checked />
+        <button type="submit">Send</button>
+
+        <script>
+            // DOM -> Document Object Model = all the elements in your page
+            // This will write "Hello" in HTML at the end of the current content
+            document.write("Hello");
+
+            // [SELECT]
+            // [SELECT ONE]
+            // uses CSS selector -> https://flukeout.github.io/
+            const myHeading = document.querySelector("h1");
+
+            // [SELECT MULTIPLE] -> Array[]
+            const allP = document.querySelectorAll("p");
+            const allSelectors = document.querySelectorAll("main section.card>h2");
+            const secondP = document.querySelectorAll("p")[1];
+
+            // Old version - Don't use it pls
+            const oldId = document.getElementById("logo");
+            const oldClass = document.getElementsByClassName("card");
+            const oldTag = document.getElementsByTagName("p");
+
+            // [READ]
+            const mailId = document.querySelector("#usermail").id;
+            const mailElement = document.querySelector("#usermail");
+            const shortId = mailElement.id;
+            // They select the same value, but we can now re-use mailelement to read more attributes
+            const shortType = mailElement.type;
+            const shortName = mailElement.name;
+            const shortValue = mailElement.value; // Extremely usefull
+            const longValue = document.querySelector("input").value;
+            const longChecked = document.querySelector("[type='checkbox']").checked;
+
+            // CSS CLASS -> classname, .classlist = a read-only property that is used to return CSS classes (as an array)
+            document.querySelector("h1").classList.add("centered"); // ADD the "centered" class
+            document.querySelector("h1").classList.remove("centered"); // REMOVE the class
+            document.querySelector("h1").classList.toggle("centered"); // toggle between enabled/disabled
+            const isCentered = document.querySelector("h1").classList.contains("centered");
+            // .contains() = determines wether the list contains a given item or not.
+            // if it contains the item = true, otherwise = false
+
+            // [MODIFY]
+            document.querySelector("input").value = "el_humbre@caliente.es";
+            document.querySelector("input").id = "myInput";
+            document.querySelector("input").type = "password";
+            document.querySelector("#acknowledgement").checked = false;
+            document.querySelector("button").disabled = true;
+
+            // DOES NOT WORK
+            let elementValue = document.querySelector("input").value;
+            elementValue = "not working";
+
+            // WORKS
+            let element = document.querySelector("input");
+            element.value = "working";
+            // works as well
+            document.querySelector("input").value = "working";
+
+            // MODIFY TEXT/STYLE
+            document.querySelector("h1").textContent = "Hi<em>ch</em>am";
+            // same as textContent, does not insert HTML tags properly
+            document.querySelector("h1").innerText = "Hi<em>ch</em>am";
+            // inserts HTML tags as well, but beware of security breaches
+            document.querySelector("h1").innerHTML = "Hi<em>ch</em>am";
+
+            // we can also change the styling of an element
+            document.querySelector("h1").style.textAlign = "right";
+            document.querySelector("h1").style.color = "blue";
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Dynamic clone</h1>
+        <section>
+            <article id="article-template">
+                <h2>example</h2>
+                <p>Lorem blablabla</p>
+            </article>
+        </section>
+
+        <script>
+            const articlesArray = [
+                {
+                    title: "I love HTML",
+                    content: "HTML is a very nice programmation langage... ",
+                    category: "fake",
+                },
+                {
+                    title: "I love CSS",
+                    content: "CSS is a very nice programmation langage... ",
+                    category: "fake",
+                },
+                {
+                    title: "I love JS",
+                    content:
+                        "HTML and CSS are NOT real programmation langage OMG FAKE NEWS! ",
+                    category: "leaks",
+                },
+            ];
+
+            // Second : I'm lazy and I know it
+            // 1 - I need a model/template/mock/placeholder
+            const articleFake = document.querySelector("#article-template");
+
+            // 2 - Duplicate/clone our model
+            for (const articleData of articlesArray) {
+                // 1 - Clone element (true => everything inside as well)
+                const articleHTMLClone = articleFake.cloneNode(true);
+                // 2 - Append
+                document.querySelector("section").append(articleHTMLClone);
+                // 3 - Customize / Pimp my clone
+                articleHTMLClone.id = "";
+                articleHTMLClone.classList.add(articleData.category);
+                articleHTMLClone.querySelector("h2").innerText = articleData.title;
+                articleHTMLClone.querySelector("p").innerText = articleData.content;
+            }
+
+            // 3 - Kill the original
+            articleFake.remove();
+        </script>
+    </body>
+
+</html>

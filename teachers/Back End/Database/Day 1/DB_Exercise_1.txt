@@ -1,0 +1,28 @@
+A customer and a bookseller build an online business to sell books.
+He wants a website where:
+- Users can register and create a accounts.
+- Users can view the different books offered.
+- Read the biography of each author.
+- Order one or multiple books.
+- Find the order history.
+
+Part 1 - Modeling of the D.B. :
+- Determine what data the customer needs to save in the database.
+	Users, Book, Orders, Authors
+- Determine the entities (tables) that result from this data.
+	Users, Books, Authors, Orders, order_details
+- Identify all the attributes (for each table).
+	user: id, username, password, email, fullname, ...
+	Books: id, title, author_id, synopsis, price,...
+	Author: id, name, Biography,...
+	Orders: id, user_id, payment_method, date ,...
+	order_details: id, book_id, order_id,qty 
+- Identify the relationships between the different tables.
+- Identify the cardinalities of these relationships.(one to one, one to many, ...)
+
+	Authors: books(one to many)
+	Books: Authors (many to one), order_details(many to many relationship with books-orders),
+	users: orders(one to many)
+	Orders: order_details, users (many to one)
+	order_details: orders, books, 
+- Create the relational diagram of the D.B.

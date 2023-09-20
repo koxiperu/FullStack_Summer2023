@@ -1,0 +1,58 @@
+We want to develop a dynamic web application of the type 'Spotify'.
+
+Here is all the information and all the needs necessary for the development of the
+database.
+
+Structure:
+
+A music is designated by a title, a release date, an artist and a category.
+An artist is designated by name, biography, year of birth and gender.
+Example of possible music category: Pop / Rock / Rap / Funk….
+A user is designated by a name, a first name, an email and a password.
+A playlist is designated by a title, a creation date, a user (the one who owns
+the playlist) and all of the music in this playlist.
+
+Create the DB design !
+
+Create the db on PhpmyAdmin
+
+Add Data to your db. (Couple of songs and artistes). Create playlists.
+
+
+
+Display the name of the song within the most playlists, the most popular song.
+
+SELECT music.title
+FROM music
+INNER JOIN playlist_music ON music.id = playlist_music.music_id
+GROUP BY music.title
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+
+Display the name of the artist present in most playlists. Complex!
+
+SELECT artists.name
+FROM artists
+INNER JOIN music ON artists.id = music.artist_id
+INNER JOIN playlist_music ON music.id = playlist_music.music_id
+GROUP BY artists.name
+ORDER BY COUNT(DISTINCT playlist_music.playlist_id) DESC
+LIMIT 1;
+
+List all playlists with the artiste at id 1 in your db.
+
+SELECT playlists.title
+FROM playlists
+INNER JOIN playlist_music ON playlists.id = playlist_music.playlist_id
+INNER JOIN music ON playlist_music.music_id = music.id
+WHERE music.artist_id = 1;
+
+List artists in popularity (Popularity is defined by how often they appear in playlists).
+
+SELECT artists.name, COUNT(DISTINCT playlist_music.playlist_id) as popularity
+FROM artists
+INNER JOIN music ON artists.id = music.artist_id
+INNER JOIN playlist_music ON music.id = playlist_music.music_id
+GROUP BY artists.name
+ORDER BY popularity DESC;

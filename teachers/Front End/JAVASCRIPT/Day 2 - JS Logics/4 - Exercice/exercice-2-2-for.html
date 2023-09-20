@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 2-2</title>
+  </head>
+
+  <body>
+    <script>
+      const secret = 5;
+      for (let life = 5; life > 0; life--) {
+        const guess = prompt(life + " lives - Guess my number");
+        if (guess == secret) {
+          alert("Win");
+          break;
+        } else {
+          alert("Loose");
+        }
+      }
+    </script>
+  </body>
+
+</html>

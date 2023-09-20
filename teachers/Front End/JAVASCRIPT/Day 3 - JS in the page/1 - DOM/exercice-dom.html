@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercice</title>
+    <style>
+      #message {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .close {
+        color: red;
+      }
+
+      .open {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Exercice
+            FIRST the restaurant is open from 11h to 14h 
+            THEN - Open also from 19h to 23h
+            ---------------------------------------------
+            BONUS :
+            HURRY - Message telling the user that the restaurant 
+            close in {add time}... less then 30min
+            // above 13:30 / 22:30
+-->
+    <h1>Rest'o'Ranch</h1>
+    <p id="message">Open/Close</p>
+    <script>
+      const now = new Date(); // actuall current hour/date
+      let currentHour = now.getHours(); // 'get' from the new date
+      let currentMinutes = now.getMinutes();
+      // TEST / DEBUG
+      // currentHour = 10;
+      // currentMinutes = 50;
+      const messElement = document.querySelector("#message");
+      // FIRST
+      const isLunch = 11 <= currentHour && currentHour < 14;
+      // THEN
+      const isDinner = 19 <= currentHour && currentHour < 23;
+      const isOpen = isLunch || isDinner;
+      if (isOpen) {
+        messElement.innerText = "Open";
+        messElement.classList.add("open");
+      } else {
+        messElement.innerText = "Close";
+        messElement.classList.add("close");
+      }
+
+      //BONUS - Hurry
+      // above 13:30 / 22:30
+      const hurry =
+        (currentHour == 13 || currentHour == 22) && currentMinutes >= 30;
+      // messElement.innerText = messElement.inerText + '. But will close in'
+      if (hurry) {
+        messElement.innerText += ". But will close in";
+        const minutesLeft = 60 - currentMinutes;
+        messElement.innerText += " " + minutesLeft + " min";
+      }
+
+      // LATER - Message telling the user that the restaurant open in ... less (30) min
+      const later =
+        (currentHour == 10 || currentHour == 18) && currentMinutes >= 30;
+      // messElement.innerText = messElement.innerTerxt + '. But will open in ....':
+      if (later) {
+        messElement.innerText += ". But it will open in ... ";
+        const minutesLeft = 60 - currentMinutes;
+        messElement.innerText += minutesLeft + " min";
+      }
+    </script>
+  </body>
+
+</html>

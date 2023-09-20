@@ -1,0 +1,235 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Fonts */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/*Nav Bar*/
+/* General */
+
+nav img {
+  height: 30px; /* From spec in FIGMA*/
+}
+
+nav a {
+  text-decoration: none;
+  color: #777777;
+  font-size: 16px;
+  padding: 8px;
+}
+nav ul.right-nav a {
+  padding: 8px 28px;
+}
+
+nav a.current {
+  color: #444444;
+}
+
+nav a.primary {
+  color: white;
+  background-color: #329ef7;
+  border: 2px solid #329ef7;
+  border-radius: 4px;
+}
+
+/* Layout (centerd on mobile) */
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  text-align: center;
+  padding: 8px 16px;
+  /* Centerd in the section*/
+  width: 90%;
+  margin: auto;
+}
+
+/* Content */
+#content {
+  padding: 120px 0;
+}
+#content article {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+#content h2 {
+  text-align: center;
+  font-size: 44px;
+  color: #444444;
+  font-weight: 600;
+}
+#content div {
+  display: flex;
+  flex-direction: column;
+}
+#content p {
+  font-size: 22.4px;
+  color: #8892a0;
+  width: 100%;
+  font-weight: 400;
+}
+
+/* Contact Us */
+#contact {
+  text-align: center;
+  width: 90%;
+  max-width: 1100px; /* FIGMA */
+  margin: auto;
+
+  /*Backgroun Img*/
+  background-image: url("../imgs/shapes/9.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 70px 0;
+}
+
+#contact article {
+  padding-top: 65px;
+  padding-bottom: 60px;
+  border-top: 5px solid #329ef7;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 5px 14px rgba(129, 129, 129, 0.2);
+}
+
+#contact h2 {
+  font-size: 44px;
+  color: #444444;
+}
+
+#contact p {
+  font-size: 22.4px;
+  color: #8892a0;
+  margin: auto;
+  margin-bottom: 40px;
+  line-height: 34px;
+  padding: 0 10px;
+}
+
+#contact form {
+  margin: auto;
+  padding: 0 10px;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin-bottom: 26px;
+  color: #6c757d;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  display: block; /* ok if not / or the margin with stack up (default display inline)*/
+  padding: 9px;
+  text-align: center;
+}
+
+form div {
+  display: flex;
+  gap: 32px;
+}
+
+/* Fixing the text area */
+textarea {
+  font-family: "Lato", sans-serif;
+}
+
+#contact button {
+  padding: 8px 27px;
+  color: white;
+  background-color: #329ef7;
+  border: 2px solid #329ef7;
+  border-radius: 4px;
+  border: 0;
+}
+
+/* Footer */
+footer {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  color: #444444;
+  padding: 100px 0 30px;
+}
+/*This selector allow to only select the paragraph 
+that is the direct child of the footer and not the other one*/
+footer > p {
+  text-align: center;
+  margin-top: 40px;
+}
+footer section > p {
+  color: #8892a0;
+  width: 300px;
+}
+
+/*REset the link style*/
+
+footer a {
+  color: #444444;
+  text-decoration: none;
+  padding: 8px;
+  display: block; /*or padding top/bottom is ignored*/
+}
+
+footer div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer section {
+  padding-right: 50px;
+}
+
+footer .social i {
+  margin: 0 18px 18px 0;
+}
+
+/* Mobile first then desktop (800px looks good)*/
+@media screen and (min-width: 800px) {
+  nav {
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #content div {
+    flex-direction: row;
+  }
+
+  #contact {
+    padding: 144px 0;
+  }
+
+  #contact p {
+    width: 532px;
+  }
+
+  #contact form {
+    width: 675px;
+  }
+
+  footer {
+    padding-bottom: 70px;
+  }
+
+  footer div {
+    margin: auto;
+    justify-content: space-between;
+  }
+}

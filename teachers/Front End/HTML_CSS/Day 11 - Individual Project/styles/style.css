@@ -1,0 +1,283 @@
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    /* remove the default dots of lists */
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #333333;
+}
+
+/* Header */
+header {
+    background-image: url('../images/header.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    padding-bottom: 200px;
+    text-align: center;
+    color: white;
+}
+
+header p {
+    color: white;
+}
+
+#register a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 5px;
+    border: 3px solid transparent;
+    transition-duration: 0.3s;
+}
+
+/* make it fun: lets add some hover ans stuff */
+#register a:hover {
+    border-color: white;
+}
+
+header h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+header p {
+    padding-bottom: 30px;
+}
+
+.red-butt-on {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background-color: #ff4e50;
+    padding: 10px 50px;
+    border-radius: 30px;
+}
+
+/* CARDS SECTION */
+main h2 {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 240px;
+    color: white;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    /* magic part */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.card {
+    background-image: url(../images/step1desk.png);
+}
+
+.card+.card {
+    background-image: url(../images/step2desk.png);
+}
+
+.card+.card+.card {
+    background-image: url(../images/step3desk.png);
+}
+
+.card h3 {
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.card p {
+    color: white;
+}
+
+.card .red-butt-on {
+    font-weight: 100;
+    padding: 5px 10px;
+    /* stretch the letters in the word*/
+    letter-spacing: 3px;
+}
+
+/* Search Form */
+#search {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#search p {
+    padding: 10px;
+}
+
+#search form input {
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding: 5px;
+}
+
+#search form input,
+#search form button {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#search form button {
+    border: 0;
+}
+
+/* horizontal line beautiful  */
+hr {
+    border: 2px solid #ff4e50;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+}
+
+footer ul ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul h2 {
+    padding-top: 20px;
+    color: #ff4e50;
+    font-size: 16px;
+}
+
+footer ul h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+footer ul a {
+    color: #666666;
+    font-size: 14px;
+    font-weight: lighter;
+    text-decoration: none;
+    padding: 10px
+}
+
+/* Tablet mode */
+@media screen and (min-width: 768px) {
+
+    nav {
+        /* center the nav bar  */
+        width: 768px;
+        margin: auto;
+        /* I want the ul and hte h1 on the same line */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    nav h1 {
+        padding-top: 15px;
+    }
+
+    header h2 {
+        /* create a bigger space from the nav  */
+        padding-top: 100px;
+        /* tiotle bigger */
+        font-size: 52px;
+    }
+
+    header p {
+        /* paragraphe bigger */
+        font-size: 24px;
+    }
+
+    .red-butt-on {
+        padding: 10px 20px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* cards in the same line */
+    .flexiflexer {
+        display: flex;
+        width: 768px;
+        margin: auto;
+    }
+
+    .card {
+        height: 400px;
+        width: 236px;
+    }
+
+    #search form input,
+    #search form button {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    /*direct children*/
+    footer>ul {
+        display: flex;
+        justify-content: space-between;
+        width: 768px;
+        margin: auto;
+    }
+
+    footer ul ul {
+        text-align: left;
+        /*They were previously horizontal*/
+        flex-direction: column;
+    }
+
+    footer ul ul a {
+        padding-left: 0;
+    }
+
+    footer img {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .flexiflexer {
+        width: 940px;
+    }
+
+    .card {
+        height: 400px;
+        width: 300px;
+    }
+
+    footer>ul {
+        width: 940px;
+    }
+}

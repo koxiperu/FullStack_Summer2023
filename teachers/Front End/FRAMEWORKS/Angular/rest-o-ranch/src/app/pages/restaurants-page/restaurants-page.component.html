@@ -1,0 +1,52 @@
+<h2>Restaurant List</h2>
+<ul>
+  <!-- 1. Directive *ngFor="[array to use for cloning]" /// Same thing as for([array to use for cloning]){code for cloning}
+    but here we don't have to use the 3 steps for cloning we saw in Vanilla JS
+
+        <li *ngFor="let rest of restaurantsList"> 
+            <p>{{rest.name}}</p>
+            <p>{{rest.likes}}</p>
+        </li>
+        <hr>
+    -->
+  <!-- 2. Directive *ngIf="[condition]" ///  Same thing as if([condition]), 
+    but here it will display the element only if condition cheks as true
+        <li *ngFor="let rest of restaurantsList"> 
+            <p *ngIf="!rest.currentlyOpen">{{rest.currentlyOpen}}</p>
+            <p>{{rest.name}}</p>
+            <p>{{rest.likes}}</p>
+        </li>
+        <hr>
+    -->
+  <!-- 
+        3. Class Binding [class.[classname]]="[condition]" 
+        Same thing as if([condition]){item.classList.add([classname])}
+        Go the CSS and add styling for the class .popular  
+        <li *ngFor="let rest of restaurantsList" [class.popular]="rest.likes>20"> 
+            <p *ngIf="!rest.currentlyOpen">{{rest.currentlyOpen}}</p>
+            <p>{{rest.name}}</p>
+            <p>{{rest.likes}}</p>
+        </li>
+    -->
+
+  <!-- 
+        4. Event Listener (click)="favorize(rest)"
+        We need to use a named function that is defined in the .ts file, but we can give it arguments not like Vanilla JS
+        It's the same as writing item.addEventListener("click", (rest)=>{[code for the function]})
+     -->
+  <li *ngFor="let rest of restaurantsList" [class.popular]="rest.likes > 20">
+    <p *ngIf="!rest.currentlyOpen">Closed</p>
+    <p>{{ rest.name }}</p>
+    <p>{{ rest.likes }}</p>
+    <button (click)="favorite(rest)" *ngIf="rest !== favoriteRestaurant">
+      Favorite
+    </button>
+    <button (click)="unfavorite()" *ngIf="rest == favoriteRestaurant">
+      Unfavorite
+    </button>
+  </li>
+</ul>
+
+<h1 *ngIf="favoriteRestaurant">
+  Favorite Restaurant : {{ favoriteRestaurant.name }}
+</h1>

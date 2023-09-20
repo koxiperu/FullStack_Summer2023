@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: square;
+    }
+
+    #done {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My Todos</h1>
+  <p>Select a user to see his todos</p>
+  <h2>Select a user</h2>
+  <form action="">
+    <select id="usersSelect">
+      <option value="">---</option>
+    </select>
+    <input type="submit" value="Get his/her todos">
+  </form>
+  <br>
+  <h2>Todo</h2>
+  <ul id="todos">
+  </ul>
+
+  <!-- Bonus -->
+  <h2>Done</h2>
+  <ul id="done">
+
+  </ul>
+  <script src="script/api-calls.js"></script>
+  <script src="script/1-users.js"></script>
+  <script src="script/2-todos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            article {
+                background-color: #ddd;
+                width: 200px;
+                padding: 10px;
+                margin: 20px auto;
+                border-radius: 5px;
+            }
+
+            .leaks {
+                border-left: 5px solid red;
+            }
+
+            .leaks h2 {
+                color: red;
+            }
+
+            .fake {
+                border-left: 5px solid fuchsia;
+            }
+
+            .fake h2 {
+                color: fuchsia;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Dynamic - filtering</h1>
+        <button id="all-action" class="all">All</button>
+        <button id="fake-action" class="fake">Fake</button>
+        <button id="leaks-action" class="leaks">Leaks</button>
+
+        <!-- Define a template -->
+        <section>
+            <article>
+                <h2>Heading</h2>
+                <p>Yes, no, maybe</p>
+            </article>
+        </section>
+
+        <script>
+            const articlesArray = [
+                {
+                    title: "I love HTML",
+                    content: "HTML is a very nice programmation langage... ",
+                    category: "fake",
+                },
+                {
+                    title: "I love CSS",
+                    content: "CSS is a very nice programmation langage... ",
+                    category: "fake",
+                },
+                {
+                    title: "I love JS",
+                    content:
+                        "HTML and CSS are NOT real programmation langage OMG FAKE NEWS! ",
+                    category: "leaks",
+                },
+            ];
+
+            const articleFake = document.querySelector("section article");
+
+            for (const articleData of articlesArray) {
+                const articleHTMLClone = articleFake.cloneNode(true);
+                document.querySelector("section").append(articleHTMLClone);
+                articleHTMLClone.classList.add(articleData.category);
+                articleHTMLClone.querySelector("h2").innerText = articleData.title;
+                articleHTMLClone.querySelector("p").innerText = articleData.content;
+            }
+
+            articleFake.remove();
+
+            // [FILTERING] => Hiding/Showing elements
+
+            // hide all <article> elements
+            function hideAll() {
+                const allArticles = document.querySelectorAll("article");
+                // array -> for of -> display none
+                for (const articleHTML of allArticles) {
+                    articleHTML.style.display = "none";
+                }
+            }
+
+            // show only the "selected" articles
+            function showSelected(selector) {
+                const matchingArticles = document.querySelectorAll(selector);
+                for (const articleHTML of matchingArticles) {
+                    articleHTML.style.display = "inherit";
+                }
+            }
+
+            // show all articles
+            document.querySelector("#all-action").addEventListener("click", function () {
+                showSelected("article");
+            });
+
+            // show "fake" articles
+            document.querySelector("#fake-action").addEventListener("click", function () {
+                hideAll();
+                showSelected("article.fake");
+            });
+
+            // show "leaks" articles
+            document.querySelector("#leaks-action").addEventListener("click", function () {
+                hideAll();
+                showSelected("article.leaks");
+            });
+        </script>
+    </body>
+
+</html>

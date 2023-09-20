@@ -1,0 +1,105 @@
+Part 1 :
+	- Retrieve books that are under 50 years old (released less than 50 years ago).
+	SELECT * FROM books WHERE YEAR(NOW()) - YEAR(publication_date) < 50
+
+	- Retrieve all the authors that are Female (gender)
+	SELECT * FROM authors WHERE gender = "female"
+
+Part 2:
+	- Get all the books from the author "JK Rowling"
+	SELECT * from books b 
+	INNER JOIN authors a ON b.author_id = a.id 
+	WHERE a.name LIKE "%Rowling" 
+
+	- Get all the authors books that are not "JK Rowling"
+	SELECT * from books b 
+	INNER JOIN authors a ON b.author_id = a.id 
+	WHERE a.name NOT LIKE "%Rowling" 
+
+	- Retrieve all books whose author has the letter 's' in his name or first name.
+
+	SELECT title
+	FROM books b
+	INNER JOIN authors a ON b.author_id = a.id
+	WHERE a.name LIKE '%s%'
+
+
+
+Part 3:
+	- Retrieve the chepeast book with authors name
+	SELECT name, title FROM books b
+	INNER JOIN authors a on b.author_id = a.id
+	ORDER BY price LIMIT 1;	
+
+
+
+	- Retrieve the most expensive book with author's name
+	SELECT name, title FROM books b
+	INNER JOIN authors a on b.author_id = a.id
+	ORDER BY price DESC LIMIT 1;	
+
+	
+
+	- Retrieve the 3 most expensive books with author's name
+
+	SELECT name, title FROM books b
+	INNER JOIN authors a on b.author_id = a.id
+	ORDER BY price DESC LIMIT 3;	
+
+Part 4:
+	- Get all the books from the youngest to the oldest author
+	SELECT * FROM books b INNER JOIN author a ON b.author_id = a.id
+	ORDER BY birth_year DESC
+
+	- Retrieve the number of books by author (with the name of the author)
+	SELECT name, COUNT(*) as total_books FROM books b INNER JOIN authors a on b.author_id = a.id
+	GROUP BY a.id
+
+Part 6:
+	- Get the sum of price for all the books from the author 'JK Rowling'
+	SELECT name, SUM(price) as total_price 
+	FROM books b 
+	INNER JOIN authors a ON a.id = b.author_id
+	WHERE a.name LIKE "%Rowling";
+
+
+	- Get the sum of price for all books by author
+	SELECT name, SUM(price) as total_price 
+	FROM books b 
+	INNER JOIN authors a ON a.id = b.author_id
+
+	- Get average price of all books by author
+	SELECT name, AVG(price) as average_price
+	FROM books b
+	INNER JOIN authors a ON b.author_id = a.id
+	GROUP BY a.id
+
+	- Get the sum of the price of all books by gender
+	SELECT gender, SUM(price)
+	FROM books b
+	INNER JOIN authors a ON a.id = b.author_id
+	GROUP BY gender
+
+Part 7:
+	- Get the author who has the most expensive collection of books.
+	SELECT a.name, SUM(price) as total_price
+	FROM books b
+	INNER JOIN authors a ON b.author_id = a.id
+	GROUP BY a.id, a.name
+	ORDER BY total_price DESC
+	LIMIT 1
+
+	- Retrieve all the genders with more than 3 books
+	SELECT gender, COUNT(*) as Total
+	FROM books b INNER JOIN authors a ON a.id = b.author_id
+	GROUP BY gender
+	HAVING Total > 3
+
+
+Part 8:
+	- All JK Rowlings books now cost 20 euro more. Update the price of these books.
+	
+	UPDATE books b 
+	INNER JOIN authors a ON b.author_id = a.id
+	SET price = price +20
+	WHERE a.name LIKE "%Rowling"

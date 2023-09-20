@@ -1,0 +1,191 @@
+/* Must have */
+:root {
+    --main_color: orange;
+    /*We should use CSS classes instead*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Generals */
+body {
+    background-color: rgb(168, 168, 168);
+    font-family: sans-serif;
+}
+
+.card {
+    height: 420px;
+    width: 370px;
+    margin: 50px auto;
+    background-color: #fff;
+    animation: card 10s ease-in-out infinite alternate;
+}
+
+@keyframes card {
+    from {
+        transform: translate(-20px, -20px);
+        box-shadow: 20px 20px 0 0 var(--main_color);
+    }
+
+    45% {
+        transform: translate(-20px, -20px);
+        box-shadow: 20px 20px 0 0 var(--main_color);
+    }
+
+    55% {
+        transform: translate(20px, 20px);
+        box-shadow: none;
+    }
+
+    to {
+        transform: translate(20px, 20px);
+        box-shadow: none;
+    }
+}
+
+.card header {
+    background-image: url(https://picsum.photos/400/400);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.card .card__content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.card .card__content h2 {
+    font-size: 2rem;
+}
+
+.card .card__content h3 {
+    color: var(--main_color)
+}
+
+.card .card__content p {
+    font-size: 1rem;
+    color: grey;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* card mecanic */
+.card {
+    overflow: hidden;
+    position: relative;
+}
+
+.card .card__content {
+    position: absolute;
+    /*What's reference element ? */
+    bottom: 0px;
+    animation: card-content 10s ease-in-out infinite alternate;
+}
+
+@keyframes card-content {
+    from {
+        transform: translateY(0%);
+    }
+
+    45% {
+        transform: translateY(0%);
+    }
+
+    55% {
+        transform: translateY(55%);
+    }
+
+    to {
+        transform: translateY(55%);
+    }
+}
+
+/*BONUS*/
+/*Date*/
+.card__date {
+    /* where is the element ?*/
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* Shape */
+    background-color: var(--main_color);
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /* Inner layout */
+    /*BEST Centered perfectly : more than one*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*OK : text align center + Padding*/
+}
+
+.card__day {
+    font-size: 1.6rem;
+}
+
+.card__month {
+    text-transform: uppercase;
+}
+
+/* Category Tag */
+.card__category {
+    background-color: var(--main_color);
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+}
+
+/*Footer*/
+.card .card__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/*Ajust the content section bottom offset*/
+.card .card__content {
+    bottom: 50px;
+}
+
+/*Make it last mile perfect */
+
+.card {
+    border-radius: 5px;
+}
+
+/* filter on the picture*/
+.card .card__header {
+    animation: card-header 10s ease-in-out infinite alternate;
+}
+
+
+@keyframes card-header {
+    from {
+        filter: brightness(0.5);
+    }
+
+    45% {
+        filter: brightness(0.5);
+    }
+
+    55% {
+        filter: brightness(1);
+    }
+
+    to {
+        filter: brightness(1);
+    }
+}

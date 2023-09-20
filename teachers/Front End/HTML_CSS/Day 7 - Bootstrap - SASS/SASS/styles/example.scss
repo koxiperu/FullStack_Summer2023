@@ -1,0 +1,19 @@
+$main_color: pink;
+
+nav {
+    border: 1px solid $main_color;
+
+    ul {
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

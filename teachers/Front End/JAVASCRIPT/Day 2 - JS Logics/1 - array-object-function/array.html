@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // store multiple data
+            const fruits = ["Orange", "Banana", 1, 2, true];
+
+            // array index is 0 based
+            console.log(fruits[0]);
+            console.table(fruits);
+
+            // length of the array
+            console.log(fruits.length);
+            // retrieve the last item of the array
+            console.log(fruits[fruits.length - 1]);
+
+            // add a value at the end of the array
+            fruits[fruits.length] = "Peach";
+            // write over another value
+            fruits[0] = "Apple";
+            console.table(fruits);
+
+            const drawers = [["phone charger", "headphones", "broken smartphone"], ["Controller", "3DS"], ["CVs", ["Attendence sheet", "Evaluations"]], ["USB stick", "keyboard"]];
+            console.log(drawers[1][1]); // 3DS
+            console.log(drawers[2][1][1]); // Evaluations
+            console.log(drawers); // Drawers
+        </script>
+    </body>
+
+</html>

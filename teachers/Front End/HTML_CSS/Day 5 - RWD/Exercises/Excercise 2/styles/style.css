@@ -1,0 +1,215 @@
+/*Variables for colors*/
+/*you call the variable like this :
+ var(add here the variable name) for exemple*/
+:root {
+    --dark_green: #0c7973;
+    --green: #2a8878;
+    --beige: #feebda;
+    --pink: #e782a4;
+    --pink_dark: #991d42;
+}
+
+/* Must have */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General*/
+body {
+    background-color: var(--green);
+    font-family: 'Cookie', cursive;
+    text-align: center;
+    color: var(--beige);
+}
+
+/*Mobile First*/
+
+header {
+    background-color: var(--dark_green);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 15px;
+}
+
+header input {
+    background-color: var(--green);
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    width: 80px;
+}
+
+header input::placeholder {
+    color: lightgray;
+    font-style: italic;
+}
+
+.navigation {
+    display: none;
+    font-size: 2rem;
+}
+
+/* Main Part*/
+#logo {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p a {
+    color: var(--pink)
+}
+
+h2 {
+    font-size: 40px;
+}
+
+/* articles */
+
+article {
+    color: var(--pink);
+    background-color: var(--beige);
+    padding: 10px;
+    margin: 10px;
+}
+
+article img {
+    display: none;
+}
+
+article h3 {
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted var(--pink);
+}
+
+/* Tablet Mode*/
+
+@media screen and (min-width: 800px) {
+    header img {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .navigation {
+
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        background-color: var(--beige);
+        padding: 10px;
+    }
+
+    .navigation a {
+        color: var(--pink);
+        text-decoration: none;
+        padding: 10px 50px;
+    }
+
+    #logo {
+        padding: 30px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+    }
+
+    #introduction {
+        text-align: left;
+        width: 70%;
+        padding: 10px;
+    }
+
+    .flexy {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flexy article {
+        width: 280px;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width:950px) {
+
+    Header {
+        justify-content: flex-end;
+    }
+
+    .navigation {
+        justify-content: flex-end;
+    }
+
+    #logo {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+        height: 80px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #introduction {
+        margin: auto;
+        width: 65%;
+    }
+
+    #introduction h1 {
+        font-size: 5rem;
+    }
+
+    #introduction p {
+        margin-top: 40px;
+        column-count: 2;
+    }
+
+    .flexy {
+        justify-content: space-evenly;
+    }
+
+
+    .flexy article {
+        margin-top: 50px;
+        position: relative;
+        width: 30%;
+    }
+
+    /* Bonus */
+    article img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition-duration: 0.4s;
+    }
+
+    article:hover img {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1.5);
+    }
+}

@@ -1,0 +1,26 @@
+div {
+    background-color: lightblue;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    /*padding-top: 100px;*/
+    /*padding: 50px; all the sides*/
+    /*padding: 50px 0; top/bottom & left/right*/
+    /*padding: 50px 0 20px; top & left/right & bottom*/
+    padding: 50px 10px 0 20px;
+    /*top / right / bottom / left*/
+
+    /* margin */
+    margin-bottom: 50px;
+
+    /* border */
+    border: 5px solid darkblue;
+    border-radius: 50%;
+    /* https://bennettfeely.com/clippy/ */
+    /*clip-path: polygon(0% 0%, 0% 100%, 100% 100%);*/
+
+    /* center horizontally */
+    width: 300px;
+    margin: auto auto;
+}

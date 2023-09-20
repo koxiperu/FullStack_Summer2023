@@ -1,0 +1,48 @@
+Exercise 1:
+Consider the following table named "Employees":
++----+------------+-----------+------+
+| ID | First_Name | Last_Name | Age  |
++----+------------+-----------+------+
+| 1  | John       | Doe       | 25   |
+| 2  | Jane       | Smith     | 30   |
+| 3  | Adam       | Johnson   | 35   |
+| 4  | Emily      | Davis     | 28   |
++----+------------+-----------+------+
+Write an SQL query to retrieve the first name and last name of employees who are older than 28.
+
+
+Exercise 2:
+Consider the following table named "Orders":
++----+------------+------------+----------+
+| ID | Order_Date | Ship_Date  | Customer |
++----+------------+------------+----------+
+| 1  | 2023-06-01 | 2023-06-05 | A        |
+| 2  | 2023-06-02 | 2023-06-07 | B        |
+| 3  | 2023-06-03 | 2023-06-06 | A        |
+| 4  | 2023-06-04 | 2023-06-09 | C        |
++----+------------+------------+----------+
+
+Write an SQL query to retrieve the order ID and customer name for orders where the ship date is later than the order date.
+
+Exercise 3:
+Consider the following two tables:
+Table "Customers":
++----+------------+-------+
+| ID | First_Name | State |
++----+------------+-------+
+| 1  | John       | NY    |
+| 2  | Jane       | CA    |
+| 3  | Adam       | NY    |
+| 4  | Emily      | CA    |
++----+------------+-------+
+Table "Orders":
++----+------------+------------+----------+
+| ID | Order_Date | Ship_Date  | Customer |
++----+------------+------------+----------+
+| 1  | 2023-06-01 | 2023-06-05 | 1        |
+| 2  | 2023-06-02 | 2023-06-07 | 2        |
+| 3  | 2023-06-03 | 2023-06-06 | 1        |
+| 4  | 2023-06-04 | 2023-06-09 | 3        |
++----+------------+------------+----------+
+Write an SQL query to retrieve the first name and state of customers who have placed more than one order.
+

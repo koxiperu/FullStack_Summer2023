@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Exercice 2-1</title>
+  </head>
+
+  <body>
+    <script>
+      const secret = 5;
+      let lives = 5;
+      while (lives > 0) {
+        const guess = prompt(lives + " lives - pick a number");
+        if (guess == secret) {
+          alert("GG EZ");
+          break; // exit the loop
+        } else {
+          alert("OMG U NOOB!");
+          lives--; // same as lifes = lifes -1
+        }
+      }
+    </script>
+  </body>
+
+</html>

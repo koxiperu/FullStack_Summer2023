@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lists of Songs</h1>
+
+    <ul id="listOfSongs">
+        <li id="liTemplate"></li>
+    </ul>
+
+    <script>
+        // Function to fetch the songs using AJAX
+        async function getSongs()
+        {
+            const response = await fetch("../Back/client.php");
+            const songs = await response.json();
+            let modelLi = document.querySelector("#liTemplate");
+                let listOfSongsHtml = document.querySelector("#listOfSongs");
+
+                for (const song of songs) {
+                    let clone = modelLi.cloneNode(true);
+                    listOfSongsHtml.append(clone);
+                    clone.innerHTML = song.name+" <b> genre : </b>"+song.genre;
+                }
+        }
+        // Call the function when the page is loaded
+        window.onload = getSongs();
+    </script>
+</body>
+</html>
+

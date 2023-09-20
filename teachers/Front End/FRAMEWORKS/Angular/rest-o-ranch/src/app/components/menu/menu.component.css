@@ -1,0 +1,24 @@
+* {
+  color: black;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+li {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+li:hover {
+  background-color: #ccc;
+}
+
+a {
+  text-decoration: none;
+}

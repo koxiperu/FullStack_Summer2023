@@ -1,0 +1,23 @@
+<h2>New restaurant: {{ restName }}</h2>
+<form (ngSubmit)="createRestaurant()">
+  <input
+    type="text"
+    name="name"
+    placeholder="Restaurant name"
+    [(ngModel)]="restName"
+  />
+  <input
+    type="number"
+    name="likes"
+    placeholder="Number of likes"
+    [(ngModel)]="restLikes"
+  />
+  <label for="isOpen">Is the restaurant open ?</label>
+  <input
+    type="checkbox"
+    name="currentlyOpen"
+    id="isOpen"
+    [(ngModel)]="restOpen"
+  />
+  <input type="submit" />
+</form>

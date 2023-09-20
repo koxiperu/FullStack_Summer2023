@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Spectral:wght@400&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* Show before after to my students <3 */
+    margin: 0;
+    padding: 0;
+}
+
+/*
+✔️ 2. Use #CCCCCC as a background color.
+The fonts are : 
+- Roboto for titles
+- Spectral for texts
+*/
+body {
+    background-color: #cccccc;
+    font-family: Spectral;
+}
+
+h1,
+h2 {
+    font-family: Roboto;
+}
+
+/*
+✔️ 3. Dont do the navigation part, yet.
+   Center your main content in a 600px large division.
+*/
+main {
+    width: 600px;
+    margin: auto;
+}
+
+/*
+✔️ 4. Center your main headings and put them in uppercase
+*/
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: white;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+/*
+5. Do the layout for the article 1 big and 3 on the same line
+*/
+article {
+    background-color: #fff;
+    padding: 20px;
+    margin: 5px 0;
+}
+
+.flexyflexer {
+    display: flex;
+    gap: 10px;
+}
+
+/*6.a. link anchors with the identificated part of your web page.*/
+/*
+<a href="#something">Link</a>
+will scroll to 
+<section id="something"></section>
+*/
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/*
+6.b. create a navigation bar in static position to begin.
+Links are padded 50px by 20px
+*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+header ul a {
+    /*colors*/
+    background-color: chartreuse;
+    color: white;
+    /* box models */
+    padding: 20px 50px;
+    /*text related*/
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/*
+6.c. Add the colors :
+news : #2980b9
+buzz : #c0392b
+sport : #27ae60
+economy : #16a085
+*/
+a[href="#news"],
+section#news h1 {
+    color: white;
+    background-color: #2980b9;
+}
+
+a[href="#buzz"],
+section#buzz h1 {
+    color: white;
+    background-color: #c0392b;
+}
+
+a[href="#sport"],
+section#sport h1 {
+    color: white;
+    background-color: #27ae60;
+}
+
+a[href="#economy"],
+section#economy h1 {
+    color: white;
+    background-color: #16a085;
+}
+
+/* BONUS : change the background color for the buttons when the mouse is over them */
+a[href="#news"]:hover {
+    color: #2980b9;
+    background-color: white;
+}
+
+a[href="#buzz"]:hover {
+    color: #c0392b;
+    background-color: white;
+}
+
+a[href="#sport"]:hover {
+    color: #27ae60;
+    background-color: white;
+}
+
+a[href="#economy"]:hover {
+    color: #16a085;
+    background-color: white;
+}

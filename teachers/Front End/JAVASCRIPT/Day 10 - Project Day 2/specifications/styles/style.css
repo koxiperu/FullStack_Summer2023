@@ -1,0 +1,41 @@
+body {
+  padding-bottom: 1000px;
+}
+main {
+  width: 1000px;
+  margin: auto;
+}
+
+nav,
+section#cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section#cards article {
+  width: 21%;
+  position: relative;
+}
+
+section#cards article img {
+  width: 100%;
+}
+
+.seller {
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+}
+
+li img {
+  float: left;
+  padding-right: 20px;
+}
+li p {
+  padding: 20px;
+}

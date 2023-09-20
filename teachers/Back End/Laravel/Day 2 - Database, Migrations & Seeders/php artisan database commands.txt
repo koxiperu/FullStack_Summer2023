@@ -1,0 +1,32 @@
+{{Amazing Docs for mysql : cheat sheet
+https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3}}
+
+
+1. Setup DB connection
+To use a database with Laravel :
+Go to .env file and update the following lines :
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE={{laravel project DB }} cap4jobs in our case
+DB_USERNAME=root
+DB_PASSWORD=root
+
+2. Use migrations
+Create the migration with the command line :
+php artisan make:migration create_listings_table
+the "create_" + "_table" are mandatory when creating a migration file.
+
+3. Run the migration
+Create the table using the migration file :
+php artisan migrate
+
+- Optional :
+Rollback -> php artisan migrate:rollback
+Rollback all migration + migrate -> php artisan migrate:refresh
+Delete all tables + migrate -> php artisan migrate:fresh
+
+4. Use the seeder
+You can run the migration and the seeder at the same time :
+php artisan migrate --seed
+php artisan migrate:refresh --seed

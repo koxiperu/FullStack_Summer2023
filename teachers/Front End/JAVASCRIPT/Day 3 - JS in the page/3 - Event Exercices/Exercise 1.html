@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <style>
+            #action {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                z-index: 1;
+                background-color: white;
+            }
+
+            #menu {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: black;
+                padding: 2rem;
+                margin: 0;
+                transform: translateX(-105%);
+                transition-duration: 0.4s;
+                /* cubic-bezier > google it :) */
+                transition-timing-function: cubic-bezier(0.4, -0.04, 0.27, 1.4);
+                border-radius: 0 0 0 0;
+                height: 100vh;
+            }
+
+            #menu.opened {
+                transform: translateX(-10%);
+                border-radius: 0 50% 50% 0;
+            }
+
+            a {
+                display: block;
+                color: lightgrey;
+                text-decoration: none;
+                transition-duration: 0.2s;
+                transform: scale(1);
+            }
+
+            a:hover {
+                color: white;
+                text-decoration: underline;
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <button id="action"><i class="fas fa-bars"></i></button>
+            <ul id="menu">
+                <li>
+                    <a href="#"> Home </a>
+                </li>
+                <li>
+                    <a href="#"> About </a>
+                </li>
+                <li>
+                    <a href="#"> Contact </a>
+                </li>
+                <li>
+                    <a href="#"> Info </a>
+                </li>
+            </ul>
+        </header>
+        <script>
+            /* Make the menu appear and disappear when the user click on the
+              button using the class "opened" from the #menu */
+            const actionButton = document.querySelector("#action");
+            actionButton.addEventListener("click", function () {
+                document.querySelector("#menu").classList.toggle("opened");
+            });
+
+            /*
+                        Once uppon a time, 
+                        Their was a button called "action"
+                        That button was visible from any user in the page.
+                        It was said that once the action button was click, some magic menu slide in the page.
+            
+                        There a sexy magician wrote that spell : 
+                
+                        const actionButton              Let's create variable called "actionButton" 
+                        =                               that contains 
+                        document.querySelector          the HTML element (in the document) 
+                        ('#action');                    with the id="action"
+                        
+                        .addEventListener(              When
+                        actionButton                    The action button
+                        'click',                        is clicked
+                        function () {                   launch this algorythm/process/function
+            
+            
+                        document.querySelector('#menu') In the document, seek for an element with id="menu"
+                        .classList                      Change its CSS class=""
+                        .toggle('opened');              So that, 
+                                                            if it does not contain CSS class="opened", 
+                                                                you add it.
+                                                            else if it HAS the CSS class="opened"    
+                                                                remove it.
+            
+                            */
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,40 @@
+1. Prompt for User's Name
+. Begin by asking the user for their name.
+. Use the prompt() function to open a dialog box where the user can enter 
+their name.
+. Store the user's input in a constant variable named name.
+
+2. Confirm User's Age
+. Confirm if the user is above 18 or not.
+. Use the confirm() function to open a dialog box with an "Ok" and "Cancel" 
+button.
+. The result of this function isn't stored, because the exercise doesn't 
+require it.
+
+3. Prompt for User's Email
+.Ask the user for their email.
+.Use the prompt() function again to get the user's email.
+.Store the user's input in a constant variable named email.
+
+4.Alert the User
+.Alert the user that their email will be used for further communication.
+.Use the alert() function to display a message to the user.
+
+5. Prompt for User's Favourite Color
+.Ask the user for their favourite color.
+.Use the prompt() function to get the user's favourite color.
+.Store the user's input in a constant variable named color.
+
+6. Prompt for User's Favourite Food
+.Ask the user for their favourite food.
+.Use the prompt() function to get the user's favourite food.
+.Store the user's input in a constant variable named food.
+
+7. Alert the User
+.Notify the user that the information has been recorded.
+.Use the alert() function to display a personalized message to the user.
+
+8. Display the Information
+.Finally, use the document.write() function to display the collected 
+information.
+.Create a new line for each piece of information using the <br/> HTML tag.

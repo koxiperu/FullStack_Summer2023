@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <nav>
+        <div class="left">
+          <button id="all">All</button>/
+          <button id="best">Best Seller</button>
+        </div>
+        <div class="right">
+          <img src="images/icon-filter.png" alt="" />
+          Sort by
+          <button id="name">Name</button>/
+          <button id="price">Price</button>
+        </div>
+      </nav>
+      <section id="cards">
+        <article>
+          <div class="seller">Best Seller</div>
+          <img src="images/pic-apple.png" alt="" />
+          <h3>Title of that crap</h3>
+          <h4>Too F**king expessive</h4>
+        </article>
+      </section>
+      <hr />
+      <section>
+        <h2>Comments</h2>
+        <form action="IDontCare.php">
+          <textarea name="" id="comment"></textarea>
+          <button type="submit">submit</button>
+        </form>
+        <ul id="coms">
+          <li>
+            <img src="images/friend4.png" alt="" />
+            <p>First! HAHAHA</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/cloning.js"></script>
+    <script src="scripts/filtering.js"></script>
+    <script src="scripts/forms.js"></script>
+  </body>
+</html>
